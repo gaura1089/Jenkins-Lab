@@ -69,3 +69,12 @@ SSH username: must match the agent server user
 The warning no key algorithms provided; JENKINS-42959 disabled is not critical. It’s just saying Jenkins is using default key algorithms.
 
 The real blocker is the private key authentication failing.
+
+
+
+grep jenkins /etc/passwd
+
+usermod -s /bin/bash jenkins
+
+passwd -S jenkins
+
