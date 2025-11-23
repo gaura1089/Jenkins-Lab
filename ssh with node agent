@@ -1,0 +1,71 @@
+1️⃣ Check the SSH username
+
+In your Jenkins node configuration, make sure the username matches the user on the agent server.
+
+Example: If you’re using an EC2 instance, the username might be:
+
+ubuntu (for Ubuntu)
+
+ec2-user (for Amazon Linux)
+
+centos (for CentOS)
+
+Do NOT use jenkins unless a jenkins user exists on the agent.
+
+2️⃣ Verify the private key
+
+Ensure the private key in Jenkins matches the public key on the agent server:
+
+On the Jenkins server, find your private key (e.g., id_rsa.pem).
+
+On the agent server, check that the corresponding public key is in the user’s ~/.ssh/authorized_keys.
+
+Example:
+
+# On agent server
+cat ~/.ssh/authorized_keys
+# You should see the public key from your .pem file
+
+
+If it’s missing, add it:
+
+# On agent server
+echo "<your-public-key>" >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+
+3️⃣ Fix permissions on Jenkins private key
+sudo chown jenkins:jenkins /path/to/id_rsa.pem
+sudo chmod 600 /path/to/id_rsa.pem
+
+4️⃣ Test manually
+
+From Jenkins server:
+
+sudo su - jenkins
+ssh -i /path/to/id_rsa.pem agentuser@13.126.65.131
+
+
+Replace agentuser with the correct username.
+
+If this fails, Jenkins will also fail. Fix the key/user mismatch until this manual SSH works.
+
+5️⃣ Update Jenkins node
+
+Go to Manage Jenkins → Nodes → Node Name → Configure
+
+Update:
+
+Remote root directory: e.g., /home/ubuntu/jenkins
+
+Credentials: select the correct private key credential
+
+Host Key Verification Strategy: Known Hosts file
+
+SSH username: must match the agent server user
+
+💡 Important:
+
+The warning no key algorithms provided; JENKINS-42959 disabled is not critical. It’s just saying Jenkins is using default key algorithms.
+
+The real blocker is the private key authentication failing.
