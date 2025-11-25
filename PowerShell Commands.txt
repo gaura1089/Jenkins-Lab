@@ -1,0 +1,129 @@
+1. Create Distribution Groups.
+
+PowerShell Cmd:
+
+Import-CSV “C:\temp\distgroups.csv” | foreach {New-DistributionGroup -Name $_.name -PrimarySmtpAddress $_.PrimaryEmail -Type $_.Type}
+
+2. Add Members in Distribution Groups
+
+PowerShell Cmd:
+
+Import-CSV C:\Users\Gaurav.26\Downloads\DL\DL1.csv | ForEach {Add-DistributionGroupMember -Identity github_powerusers@coforge.com -Member $_.Name}
+
+
+
+3. Add contacts in Office 365 Portal
+
+PowerShell Cmd:
+
+Import-Csv “C:\temp\ExternalContacts.csv” |%{New-MailContact -Name $_.Name -DisplayName $_.Name -ExternalEmailAddress $_.ExternalEmailAddress}
+
+
+
+4. This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
+
+Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
+
+5. Add-RecipientPermission -Identity "Access.Campus@coforge.com" -Trustee "CSO.HelpdeskCampus@coforge.com" -AccessRights "SendAs"
+
+How to remove all DL user.
+
+6.Import-Csv -Path "C:\Users\Gaurav.26\Downloads\DL\DL1.csv" | ForEach-Object { Remove-DistributionGroupMember -Identity "TestDLJuly@coforge.com" -Member $_.Name -Confirm:$false; Write-Host "$($_.Name) removed from Dlnam" }
+
+7. How to get user list from DDL.
+Get-DynamicDistributionGroupMember -Identity Coforge.GGN@coforge.com -ResultSize Unlimited | Select -Expand PrimarySmtpAddress
+
+===============
+
+Add-MailboxPermission : The term 'Add-MailboxPermission' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+
+======================
+
+
+
+DLs bulk creations cmdlet:-
+
+# Import CSV file
+$DLs = Import-Csv -Path "C:\Users\Gaurav.26\Downloads\DL\DL Bulk Creation.csv"
+
+# Loop through each row and create Distribution List without explicitly setting an Alias
+foreach ($DL in $DLs) {
+    # Convert Owners column to array
+    $OwnersArray = $DL.Owners -split ","
+
+    # Create Distribution Group without Alias
+    New-DistributionGroup -Name $DL.Name -PrimarySmtpAddress $DL.PrimarySmtpAddress -ManagedBy $OwnersArray
+}
+
+
+=============== ===============  ============= 
+DLs bulk creations witn username cmdlet:-
+
+
+# Import CSV file
+$DLs = Import-Csv -Path "C:\Users\Gaurav.26\Downloads\DL\DL Bulk Creation.csv"
+
+# Loop through each row and create Distribution List with Owners and Members
+foreach ($DL in $DLs) {
+    # Convert Owners column to array
+    $OwnersArray = $DL.Owners -split ","
+    # Convert Members column to array
+    $MembersArray = $DL.Members -split ","
+
+    # Create Distribution Group without Alias
+    New-DistributionGroup -Name $DL.Name -PrimarySmtpAddress $DL.PrimarySmtpAddress -ManagedBy $OwnersArray
+
+    # Add Members to Distribution Group
+    foreach ($Member in $MembersArray) {
+        Add-DistributionGroupMember -Identity $DL.Name -Member $Member
+    }
+}
+
+=====================
+To delete members 
+
+
+
+$distributionLists = @("OffshoreTMAtSantander@coforge.com", "Tmatsantander@coforge.com", "OffshoreatSantander@coforge.com")
+
+foreach ($dl in $distributionLists) {
+
+    Get-DistributionGroupMember -Identity $dl | foreach {Remove-DistributionGroupMember -Identity $dl -Member $_.Identity -Confirm:$false}
+
+}
+ 
+
+=====================
+
+
+# CSV फ़ाइल का पथ
+$CSVPath = "C:\Users\Gaurav.26\Downloads\DL\Data.csv"
+
+# DL ka naam manually specify karen
+$DLName = "IsDB.AppDatabase@coforge.com"
+
+# CSV फ़ाइल से डेटा आयात करें
+$Data = Import-Csv -Path $CSVPath
+
+foreach ($Row in $Data) {
+    $Owner = $Row.Owner
+
+    try {
+        # Existing owners ko retrieve karna
+        $existingOwners = (Get-DistributionGroup -Identity $DLName).ManagedBy
+
+        # New owner ko list mein add karna
+        $newOwners = $existingOwners + $Owner
+
+        # Updated owners ko set karna
+        Set-DistributionGroup -Identity $DLName -ManagedBy $newOwners
+
+        Write-Host "$Owner ko $DLName mein owner ke roop mein joda gaya."
+    } catch {
+        Write-Host "Truti: $Owner ko $DLName mein owner ke roop mein jodne mein viphlt: $($_.Exception.Message)"
+    }
+}
+
+=======================
