@@ -1,0 +1,159 @@
+Perfect! Option A means we will create a dedicated jenkins user on the agent EC2 for better security and isolation. Here’s the complete process:
+
+✅ Step 1: Create Dedicated Jenkins User on Agent EC2
+Login to your Amazon Linux Agent EC2 and run:
+
+
+
+
+# Create jenkins user
+sudo adduser jenkins
+
+# Set password (optional if using SSH key)
+sudo passwd jenkins
+
+# Give sudo access (optional if needed for builds)
+sudo usermod -aG wheel jenkins
+
+
+==============================
+
+
+
+✅ Step 2: Configure SSH for Jenkins User
+We need to allow Jenkins master to SSH into this user:
+
+
+
+# Switch to jenkins user
+sudo su - jenkins
+
+# Create .ssh directory
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+
+# Add public key from Jenkins master credentials
+nano ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+
+
+(Paste your EC2 key pair public key or a new key you generate for Jenkins master.)
+
+========================================
+
+
+✅ Step 3: Verify SSH Login
+From Jenkins master EC2:
+
+ssh -i /path/to/key.pem jenkins@<Agent-EC2-Public-IP>
+
+If login works → ✅
+
+======================================
+
+✅ Step 4: Install Java on Agent
+
+
+sudo amazon-linux-extras enable java-openjdk17
+sudo yum install java-17-openjdk -y
+java -version
+
+
+===================================
+
+
+✅ Step 5: Configure Node in Jenkins Master
+
+Jenkins Dashboard → Manage Jenkins → Nodes and Clouds → New Node
+Node Name: AmazonLinux-Agent
+Type: Permanent Agent
+Remote root directory: /home/jenkins/jenkins
+Launch method: Launch agents via SSH
+Host: Agent EC2 Public IP
+Credentials: Add SSH key for jenkins user
+Java path: /usr/bin/java
+
+Save → Jenkins will deploy agent jar in /home/jenkins/jenkins.
+
+=======================================
+
+
+✅ Step 6: Test Job
+Create a Freestyle job:
+
+echo "Hello from $(hostname) as Jenkins user"
+
+Restrict job to this node → Build → ✅ Success.
+
+
+=========================================
+
+
+✅ Jenkins Credentials for SSH
+Jenkins ko agent EC2 par SSH karna hota hai, isliye aapko SSH credentials dene padte hain. Ye credentials Jenkins ke Credentials Store me add hote hain.
+Steps:
+
+
+Manage Jenkins → Credentials → System → Global credentials (unrestricted) → Add Credentials
+
+
+Kind:
+
+SSH Username with private key (Recommended for EC2)
+
+
+
+Fields:
+
+
+Username:
+jenkins (kyunki aapne agent EC2 par dedicated jenkins user banaya hai)
+
+
+Private Key:
+Yaha aapko EC2 key pair ka private key dena hai (jo aapne authorized_keys me paste kiya tha).
+Options:
+
+Enter directly → Paste .pem file content
+From a file on Jenkins master → Agar master par key file hai
+From Jenkins master’s .ssh → Agar Jenkins master ke .ssh me key hai
+
+
+
+Passphrase:
+Agar key encrypted hai toh passphrase dena hoga (usually EC2 keys encrypted nahi hote).
+
+
+
+
+ID & Description:
+
+ID: jenkins-agent-key (custom name)
+Description: SSH key for Amazon Linux Jenkins agent
+
+
+
+Save
+
+
+
+
+===================================
+
+
+
+
+Run on JenkinMaster
+ssh-keyscan -H 3.110.28.231 >> /var/lib/jenkins/.ssh/known_hosts
+
+
+
+
+===================================
+
+Or better, create a drop-in file: 
+
+echo 'jenkins ALL=(ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/jenkins
+echo 'Defaults:jenkins !requiretty' | sudo tee -a /etc/sudoers.d/jenkins
+sudo chmod 440 /etc/sudoers.d/jenkins
+
