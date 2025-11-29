@@ -1,0 +1,968 @@
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.223.155
+The authenticity of host '3.110.223.155 (3.110.223.155)' can't be established.
+ED25519 key fingerprint is SHA256:kF6Z8tdzZSGjUGXxP/LABtlKoGc3SO68kvUmmFQjTSE.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '3.110.223.155' (ED25519) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-7-132 ~]$
+[ec2-user@ip-172-31-7-132 ~]$ java -version
+-bash: java: command not found
+[ec2-user@ip-172-31-7-132 ~]$ java -v
+-bash: java: command not found
+[ec2-user@ip-172-31-7-132 ~]$ java -version
+-bash: java: command not found
+[ec2-user@ip-172-31-7-132 ~]$ sudo su
+[root@ip-172-31-7-132 ec2-user]# yum install java-21-amazon-corretto -y
+Amazon Linux 2023 Kernel Livepatch repository                                                                               275 kB/s |  29 kB     00:00
+Dependencies resolved.
+============================================================================================================================================================
+ Package                                            Architecture             Version                                    Repository                     Size
+============================================================================================================================================================
+Installing:
+ java-21-amazon-corretto                            x86_64                   1:21.0.9+10-1.amzn2023.1                   amazonlinux                   218 k
+Installing dependencies:
+ alsa-lib                                           x86_64                   1.2.7.2-1.amzn2023.0.2                     amazonlinux                   504 k
+ cairo                                              x86_64                   1.18.0-4.amzn2023.0.3                      amazonlinux                   717 k
+ dejavu-sans-fonts                                  noarch                   2.37-16.amzn2023.0.2                       amazonlinux                   1.3 M
+ dejavu-sans-mono-fonts                             noarch                   2.37-16.amzn2023.0.2                       amazonlinux                   467 k
+ dejavu-serif-fonts                                 noarch                   2.37-16.amzn2023.0.2                       amazonlinux                   1.0 M
+ fontconfig                                         x86_64                   2.13.94-2.amzn2023.0.2                     amazonlinux                   273 k
+ fonts-filesystem                                   noarch                   1:2.0.5-12.amzn2023.0.2                    amazonlinux                   9.5 k
+ freetype                                           x86_64                   2.13.2-5.amzn2023.0.1                      amazonlinux                   423 k
+ giflib                                             x86_64                   5.2.1-9.amzn2023.0.2                       amazonlinux                    48 k
+ google-noto-fonts-common                           noarch                   20240401-1.amzn2023.0.2                    amazonlinux                    17 k
+ google-noto-sans-vf-fonts                          noarch                   20240401-1.amzn2023.0.2                    amazonlinux                   593 k
+ graphite2                                          x86_64                   1.3.14-7.amzn2023.0.2                      amazonlinux                    97 k
+ harfbuzz                                           x86_64                   7.0.0-2.amzn2023.0.2                       amazonlinux                   873 k
+ java-21-amazon-corretto-headless                   x86_64                   1:21.0.9+10-1.amzn2023.1                   amazonlinux                    96 M
+ javapackages-filesystem                            noarch                   6.0.0-7.amzn2023.0.6                       amazonlinux                    12 k
+ langpacks-core-font-en                             noarch                   3.0-21.amzn2023.0.4                        amazonlinux                    10 k
+ libICE                                             x86_64                   1.1.1-3.amzn2023.0.1                       amazonlinux                    76 k
+ libSM                                              x86_64                   1.2.4-3.amzn2023.0.1                       amazonlinux                    45 k
+ libX11                                             x86_64                   1.8.10-2.amzn2023.0.1                      amazonlinux                   659 k
+ libX11-common                                      noarch                   1.8.10-2.amzn2023.0.1                      amazonlinux                   147 k
+ libXau                                             x86_64                   1.0.11-6.amzn2023.0.1                      amazonlinux                    33 k
+ libXext                                            x86_64                   1.3.6-1.amzn2023.0.1                       amazonlinux                    42 k
+ libXi                                              x86_64                   1.8.2-1.amzn2023.0.1                       amazonlinux                    42 k
+ libXinerama                                        x86_64                   1.1.5-6.amzn2023.0.1                       amazonlinux                    16 k
+ libXrandr                                          x86_64                   1.5.4-3.amzn2023.0.1                       amazonlinux                    29 k
+ libXrender                                         x86_64                   0.9.11-6.amzn2023.0.1                      amazonlinux                    29 k
+ libXt                                              x86_64                   1.3.0-3.amzn2023.0.1                       amazonlinux                   183 k
+ libXtst                                            x86_64                   1.2.5-1.amzn2023.0.1                       amazonlinux                    22 k
+ libbrotli                                          x86_64                   1.0.9-4.amzn2023.0.2                       amazonlinux                   315 k
+ libjpeg-turbo                                      x86_64                   2.1.4-2.amzn2023.0.5                       amazonlinux                   190 k
+ libpng                                             x86_64                   2:1.6.37-10.amzn2023.0.6                   amazonlinux                   128 k
+ libxcb                                             x86_64                   1.17.0-1.amzn2023.0.1                      amazonlinux                   235 k
+ pixman                                             x86_64                   0.43.4-1.amzn2023.0.4                      amazonlinux                   296 k
+ xml-common                                         noarch                   0.6.3-56.amzn2023.0.2                      amazonlinux                    32 k
+
+Transaction Summary
+============================================================================================================================================================
+Install  35 Packages
+
+Total download size: 105 M
+Installed size: 283 M
+Downloading Packages:
+(1/35): alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64.rpm                                                                           13 MB/s | 504 kB     00:00
+(2/35): dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch.rpm                                                                    26 MB/s | 1.3 MB     00:00
+(3/35): cairo-1.18.0-4.amzn2023.0.3.x86_64.rpm                                                                               12 MB/s | 717 kB     00:00
+(4/35): dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch.rpm                                                               11 MB/s | 467 kB     00:00
+(5/35): dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch.rpm                                                                   27 MB/s | 1.0 MB     00:00
+(6/35): fontconfig-2.13.94-2.amzn2023.0.2.x86_64.rpm                                                                        7.6 MB/s | 273 kB     00:00
+(7/35): fonts-filesystem-2.0.5-12.amzn2023.0.2.noarch.rpm                                                                   444 kB/s | 9.5 kB     00:00
+(8/35): freetype-2.13.2-5.amzn2023.0.1.x86_64.rpm                                                                            14 MB/s | 423 kB     00:00
+(9/35): giflib-5.2.1-9.amzn2023.0.2.x86_64.rpm                                                                              1.7 MB/s |  48 kB     00:00
+(10/35): google-noto-fonts-common-20240401-1.amzn2023.0.2.noarch.rpm                                                        678 kB/s |  17 kB     00:00
+(11/35): google-noto-sans-vf-fonts-20240401-1.amzn2023.0.2.noarch.rpm                                                        21 MB/s | 593 kB     00:00
+(12/35): graphite2-1.3.14-7.amzn2023.0.2.x86_64.rpm                                                                         3.6 MB/s |  97 kB     00:00
+(13/35): harfbuzz-7.0.0-2.amzn2023.0.2.x86_64.rpm                                                                            24 MB/s | 873 kB     00:00
+(14/35): java-21-amazon-corretto-21.0.9+10-1.amzn2023.1.x86_64.rpm                                                          9.3 MB/s | 218 kB     00:00
+(15/35): javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch.rpm                                                            594 kB/s |  12 kB     00:00
+(16/35): langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch.rpm                                                              494 kB/s |  10 kB     00:00
+(17/35): libICE-1.1.1-3.amzn2023.0.1.x86_64.rpm                                                                             3.3 MB/s |  76 kB     00:00
+(18/35): libSM-1.2.4-3.amzn2023.0.1.x86_64.rpm                                                                              2.0 MB/s |  45 kB     00:00
+(19/35): libX11-1.8.10-2.amzn2023.0.1.x86_64.rpm                                                                             19 MB/s | 659 kB     00:00
+(20/35): libX11-common-1.8.10-2.amzn2023.0.1.noarch.rpm                                                                     4.9 MB/s | 147 kB     00:00
+(21/35): libXau-1.0.11-6.amzn2023.0.1.x86_64.rpm                                                                            1.5 MB/s |  33 kB     00:00
+(22/35): libXext-1.3.6-1.amzn2023.0.1.x86_64.rpm                                                                            1.7 MB/s |  42 kB     00:00
+(23/35): libXi-1.8.2-1.amzn2023.0.1.x86_64.rpm                                                                              2.0 MB/s |  42 kB     00:00
+(24/35): libXinerama-1.1.5-6.amzn2023.0.1.x86_64.rpm                                                                        857 kB/s |  16 kB     00:00
+(25/35): libXrandr-1.5.4-3.amzn2023.0.1.x86_64.rpm                                                                          1.2 MB/s |  29 kB     00:00
+(26/35): libXrender-0.9.11-6.amzn2023.0.1.x86_64.rpm                                                                        1.4 MB/s |  29 kB     00:00
+(27/35): libXtst-1.2.5-1.amzn2023.0.1.x86_64.rpm                                                                            1.1 MB/s |  22 kB     00:00
+(28/35): libXt-1.3.0-3.amzn2023.0.1.x86_64.rpm                                                                              5.3 MB/s | 183 kB     00:00
+(29/35): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                           12 MB/s | 315 kB     00:00
+(30/35): libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64.rpm                                                                      5.6 MB/s | 190 kB     00:00
+(31/35): libpng-1.6.37-10.amzn2023.0.6.x86_64.rpm                                                                           3.6 MB/s | 128 kB     00:00
+(32/35): libxcb-1.17.0-1.amzn2023.0.1.x86_64.rpm                                                                            8.4 MB/s | 235 kB     00:00
+(33/35): pixman-0.43.4-1.amzn2023.0.4.x86_64.rpm                                                                            9.1 MB/s | 296 kB     00:00
+(34/35): xml-common-0.6.3-56.amzn2023.0.2.noarch.rpm                                                                        1.2 MB/s |  32 kB     00:00
+(35/35): java-21-amazon-corretto-headless-21.0.9+10-1.amzn2023.1.x86_64.rpm                                                  69 MB/s |  96 MB     00:01
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                        67 MB/s | 105 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                    1/1
+  Installing       : fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                                                                   1/35
+  Installing       : libpng-2:1.6.37-10.amzn2023.0.6.x86_64                                                                                            2/35
+  Installing       : dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch                                                                                3/35
+  Installing       : dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch                                                                                     4/35
+  Installing       : libICE-1.1.1-3.amzn2023.0.1.x86_64                                                                                                5/35
+  Installing       : libSM-1.2.4-3.amzn2023.0.1.x86_64                                                                                                 6/35
+  Installing       : dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch                                                                                    7/35
+  Running scriptlet: xml-common-0.6.3-56.amzn2023.0.2.noarch                                                                                           8/35
+  Installing       : xml-common-0.6.3-56.amzn2023.0.2.noarch                                                                                           8/35
+  Installing       : pixman-0.43.4-1.amzn2023.0.4.x86_64                                                                                               9/35
+  Installing       : libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64                                                                                        10/35
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                            11/35
+  Installing       : libXau-1.0.11-6.amzn2023.0.1.x86_64                                                                                              12/35
+  Installing       : libxcb-1.17.0-1.amzn2023.0.1.x86_64                                                                                              13/35
+  Installing       : libX11-common-1.8.10-2.amzn2023.0.1.noarch                                                                                       14/35
+  Installing       : libX11-1.8.10-2.amzn2023.0.1.x86_64                                                                                              15/35
+  Installing       : libXext-1.3.6-1.amzn2023.0.1.x86_64                                                                                              16/35
+  Installing       : libXrender-0.9.11-6.amzn2023.0.1.x86_64                                                                                          17/35
+  Installing       : libXi-1.8.2-1.amzn2023.0.1.x86_64                                                                                                18/35
+  Installing       : libXtst-1.2.5-1.amzn2023.0.1.x86_64                                                                                              19/35
+  Installing       : libXrandr-1.5.4-3.amzn2023.0.1.x86_64                                                                                            20/35
+  Installing       : libXinerama-1.1.5-6.amzn2023.0.1.x86_64                                                                                          21/35
+  Installing       : libXt-1.3.0-3.amzn2023.0.1.x86_64                                                                                                22/35
+  Installing       : javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch                                                                              23/35
+  Installing       : graphite2-1.3.14-7.amzn2023.0.2.x86_64                                                                                           24/35
+  Installing       : google-noto-fonts-common-20240401-1.amzn2023.0.2.noarch                                                                          25/35
+  Installing       : google-noto-sans-vf-fonts-20240401-1.amzn2023.0.2.noarch                                                                         26/35
+  Installing       : langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                                                                27/35
+  Installing       : cairo-1.18.0-4.amzn2023.0.3.x86_64                                                                                               28/35
+  Installing       : harfbuzz-7.0.0-2.amzn2023.0.2.x86_64                                                                                             29/35
+  Installing       : freetype-2.13.2-5.amzn2023.0.1.x86_64                                                                                            30/35
+  Installing       : fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                                         31/35
+  Running scriptlet: fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                                         31/35
+  Installing       : giflib-5.2.1-9.amzn2023.0.2.x86_64                                                                                               32/35
+  Installing       : alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64                                                                                           33/35
+  Installing       : java-21-amazon-corretto-headless-1:21.0.9+10-1.amzn2023.1.x86_64                                                                 34/35
+  Running scriptlet: java-21-amazon-corretto-headless-1:21.0.9+10-1.amzn2023.1.x86_64                                                                 34/35
+  Installing       : java-21-amazon-corretto-1:21.0.9+10-1.amzn2023.1.x86_64                                                                          35/35
+  Running scriptlet: fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                                         35/35
+  Running scriptlet: java-21-amazon-corretto-1:21.0.9+10-1.amzn2023.1.x86_64                                                                          35/35
+  Verifying        : alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64                                                                                            1/35
+  Verifying        : cairo-1.18.0-4.amzn2023.0.3.x86_64                                                                                                2/35
+  Verifying        : dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch                                                                                     3/35
+  Verifying        : dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch                                                                                4/35
+  Verifying        : dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch                                                                                    5/35
+  Verifying        : fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                                          6/35
+  Verifying        : fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                                                                   7/35
+  Verifying        : freetype-2.13.2-5.amzn2023.0.1.x86_64                                                                                             8/35
+  Verifying        : giflib-5.2.1-9.amzn2023.0.2.x86_64                                                                                                9/35
+  Verifying        : google-noto-fonts-common-20240401-1.amzn2023.0.2.noarch                                                                          10/35
+  Verifying        : google-noto-sans-vf-fonts-20240401-1.amzn2023.0.2.noarch                                                                         11/35
+  Verifying        : graphite2-1.3.14-7.amzn2023.0.2.x86_64                                                                                           12/35
+  Verifying        : harfbuzz-7.0.0-2.amzn2023.0.2.x86_64                                                                                             13/35
+  Verifying        : java-21-amazon-corretto-1:21.0.9+10-1.amzn2023.1.x86_64                                                                          14/35
+  Verifying        : java-21-amazon-corretto-headless-1:21.0.9+10-1.amzn2023.1.x86_64                                                                 15/35
+  Verifying        : javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch                                                                              16/35
+  Verifying        : langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                                                                17/35
+  Verifying        : libICE-1.1.1-3.amzn2023.0.1.x86_64                                                                                               18/35
+  Verifying        : libSM-1.2.4-3.amzn2023.0.1.x86_64                                                                                                19/35
+  Verifying        : libX11-1.8.10-2.amzn2023.0.1.x86_64                                                                                              20/35
+  Verifying        : libX11-common-1.8.10-2.amzn2023.0.1.noarch                                                                                       21/35
+  Verifying        : libXau-1.0.11-6.amzn2023.0.1.x86_64                                                                                              22/35
+  Verifying        : libXext-1.3.6-1.amzn2023.0.1.x86_64                                                                                              23/35
+  Verifying        : libXi-1.8.2-1.amzn2023.0.1.x86_64                                                                                                24/35
+  Verifying        : libXinerama-1.1.5-6.amzn2023.0.1.x86_64                                                                                          25/35
+  Verifying        : libXrandr-1.5.4-3.amzn2023.0.1.x86_64                                                                                            26/35
+  Verifying        : libXrender-0.9.11-6.amzn2023.0.1.x86_64                                                                                          27/35
+  Verifying        : libXt-1.3.0-3.amzn2023.0.1.x86_64                                                                                                28/35
+  Verifying        : libXtst-1.2.5-1.amzn2023.0.1.x86_64                                                                                              29/35
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                            30/35
+  Verifying        : libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64                                                                                        31/35
+  Verifying        : libpng-2:1.6.37-10.amzn2023.0.6.x86_64                                                                                           32/35
+  Verifying        : libxcb-1.17.0-1.amzn2023.0.1.x86_64                                                                                              33/35
+  Verifying        : pixman-0.43.4-1.amzn2023.0.4.x86_64                                                                                              34/35
+  Verifying        : xml-common-0.6.3-56.amzn2023.0.2.noarch                                                                                          35/35
+============================================================================================================================================================
+WARNING:
+  A newer release of "Amazon Linux" is available.
+
+  Available Versions:
+
+  Version 2023.9.20251117:
+    Run the following command to upgrade to 2023.9.20251117:
+
+      dnf upgrade --releasever=2023.9.20251117
+
+    Release notes:
+     https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.9.20251117.html
+
+============================================================================================================================================================
+
+Installed:
+  alsa-lib-1.2.7.2-1.amzn2023.0.2.x86_64                                            cairo-1.18.0-4.amzn2023.0.3.x86_64
+  dejavu-sans-fonts-2.37-16.amzn2023.0.2.noarch                                     dejavu-sans-mono-fonts-2.37-16.amzn2023.0.2.noarch
+  dejavu-serif-fonts-2.37-16.amzn2023.0.2.noarch                                    fontconfig-2.13.94-2.amzn2023.0.2.x86_64
+  fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                   freetype-2.13.2-5.amzn2023.0.1.x86_64
+  giflib-5.2.1-9.amzn2023.0.2.x86_64                                                google-noto-fonts-common-20240401-1.amzn2023.0.2.noarch
+  google-noto-sans-vf-fonts-20240401-1.amzn2023.0.2.noarch                          graphite2-1.3.14-7.amzn2023.0.2.x86_64
+  harfbuzz-7.0.0-2.amzn2023.0.2.x86_64                                              java-21-amazon-corretto-1:21.0.9+10-1.amzn2023.1.x86_64
+  java-21-amazon-corretto-headless-1:21.0.9+10-1.amzn2023.1.x86_64                  javapackages-filesystem-6.0.0-7.amzn2023.0.6.noarch
+  langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                 libICE-1.1.1-3.amzn2023.0.1.x86_64
+  libSM-1.2.4-3.amzn2023.0.1.x86_64                                                 libX11-1.8.10-2.amzn2023.0.1.x86_64
+  libX11-common-1.8.10-2.amzn2023.0.1.noarch                                        libXau-1.0.11-6.amzn2023.0.1.x86_64
+  libXext-1.3.6-1.amzn2023.0.1.x86_64                                               libXi-1.8.2-1.amzn2023.0.1.x86_64
+  libXinerama-1.1.5-6.amzn2023.0.1.x86_64                                           libXrandr-1.5.4-3.amzn2023.0.1.x86_64
+  libXrender-0.9.11-6.amzn2023.0.1.x86_64                                           libXt-1.3.0-3.amzn2023.0.1.x86_64
+  libXtst-1.2.5-1.amzn2023.0.1.x86_64                                               libbrotli-1.0.9-4.amzn2023.0.2.x86_64
+  libjpeg-turbo-2.1.4-2.amzn2023.0.5.x86_64                                         libpng-2:1.6.37-10.amzn2023.0.6.x86_64
+  libxcb-1.17.0-1.amzn2023.0.1.x86_64                                               pixman-0.43.4-1.amzn2023.0.4.x86_64
+  xml-common-0.6.3-56.amzn2023.0.2.noarch
+
+Complete!
+[root@ip-172-31-7-132 ec2-user]# java -version
+openjdk version "21.0.9" 2025-10-21 LTS
+OpenJDK Runtime Environment Corretto-21.0.9.10.1 (build 21.0.9+10-LTS)
+OpenJDK 64-Bit Server VM Corretto-21.0.9.10.1 (build 21.0.9+10-LTS, mixed mode, sharing)
+[root@ip-172-31-7-132 ec2-user]# adduser jenkins
+[root@ip-172-31-7-132 ec2-user]# passwd jenkins
+Changing password for user jenkins.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-7-132 ec2-user]# usermod -aG wheel jenkins
+[root@ip-172-31-7-132 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-7-132 ~]$ sudo -s jenkins
+/bin/bash: line 1: jenkins: command not found
+[ec2-user@ip-172-31-7-132 ~]$ usermod -s /bin/bash jenkins
+usermod: no changes
+[ec2-user@ip-172-31-7-132 ~]$ sudo su
+[root@ip-172-31-7-132 ec2-user]# usermod -s /bin/bash jenkins
+usermod: no changes
+[root@ip-172-31-7-132 ec2-user]# grep jenkins /etc/passwd
+jenkins:x:1001:1001::/home/jenkins:/bin/bash
+[root@ip-172-31-7-132 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-7-132 ~]$ su - jenkins
+Password:
+[jenkins@ip-172-31-7-132 ~]$ pwd
+/home/jenkins
+[jenkins@ip-172-31-7-132 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc
+[jenkins@ip-172-31-7-132 ~]$ mkdir .ssh
+[jenkins@ip-172-31-7-132 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[jenkins@ip-172-31-7-132 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.223.155
+ssh: connect to host 3.110.223.155 port 22: Connection timed out
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.223.155
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:31:07 2025 from 103.146.111.103
+[ec2-user@ip-172-31-7-132 ~]$
+[ec2-user@ip-172-31-7-132 ~]$ su - jenkins
+Password:
+Last login: Sat Nov 29 06:36:07 UTC 2025 on pts/0
+[jenkins@ip-172-31-7-132 ~]$ chmod 700 .ssh
+[jenkins@ip-172-31-7-132 ~]$ nano .ssh/authorized_keys
+[jenkins@ip-172-31-7-132 ~]$ chmod 600 .ssh/authorized_keys
+[jenkins@ip-172-31-7-132 ~]$ ls
+[jenkins@ip-172-31-7-132 ~]$ pwd
+/home/jenkins
+[jenkins@ip-172-31-7-132 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[jenkins@ip-172-31-7-132 ~]$ cd .ssh
+[jenkins@ip-172-31-7-132 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-7-132 .ssh]$ cat "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCBsD4URlEXIRYg8xjlFkrvPcWFRrrg25ffBFsuqBQbm5vtKowAp4I2RqIGWqpUNxkYpz5BruR3RRbDhr8MBSKlKvBE8trvpY53d+LtmdPkB6BhoGW61oyOxBJS7XCMsjBH5os+5ZM4t6DXAumfT1Dx8WxNmutBXmFrx41cKh950UpV7nT/xptM52FEoQHY3TI6Ski61/g1exXN6hIqOe11WiRgSoaHjmtu/e8KwbE3js4MlEwZlBBWvILR0OP38S00imjXbNN+s9HBS/SfvBX/RYZxrJH0WQvSvRJfMf4SWVilNrgx+ecQ06Gu1jK/LxYuGloIuGISYi9oimS09Fh/9BP7UMVIZEAD0rjrXabFGywqF0+fi/So8iac1XLJaJKpDon8U30q86cQYgiFI0nesQSllpeBZYc9pDSxbrJ56euNClTOoIEs/6xJb4yIMSq+r9w+y0mFbMMXfTWimStaP30mlWV+irfOQCgy6zSqJYx9+5T6HYAtHU5IoZh7gNE= ec2-user@ip-172-31-3-4.ap-south-1.compute.internal" >> authorized_keys
+cat: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCBsD4URlEXIRYg8xjlFkrvPcWFRrrg25ffBFsuqBQbm5vtKowAp4I2RqIGWqpUNxkYpz5BruR3RRbDhr8MBSKlKvBE8trvpY53d+LtmdPkB6BhoGW61oyOxBJS7XCMsjBH5os+5ZM4t6DXAumfT1Dx8WxNmutBXmFrx41cKh950UpV7nT/xptM52FEoQHY3TI6Ski61/g1exXN6hIqOe11WiRgSoaHjmtu/e8KwbE3js4MlEwZlBBWvILR0OP38S00imjXbNN+s9HBS/SfvBX/RYZxrJH0WQvSvRJfMf4SWVilNrgx+ecQ06Gu1jK/LxYuGloIuGISYi9oimS09Fh/9BP7UMVIZEAD0rjrXabFGywqF0+fi/So8iac1XLJaJKpDon8U30q86cQYgiFI0nesQSllpeBZYc9pDSxbrJ56euNClTOoIEs/6xJb4yIMSq+r9w+y0mFbMMXfTWimStaP30mlWV+irfOQCgy6zSqJYx9+5T6HYAtHU5IoZh7gNE= ec2-user@ip-172-31-3-4.ap-south-1.compute.internal': No such file or directory
+[jenkins@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMib+MG+AZ4eUQ1txycw16QZjFD5w30v/dFU+mmv5FvZWWi4w3Cqq1hP+tOwSWFfQS612jsYlU5IIFBaqbJk24tlCvQeRruGkODWtsZnvXTyPp0eEclEciM0Z0DaaVnW+pxGgWMV76HGbXGx48tGGpGJ6YRf0gbEhmjpGgxcVduT5Y0rBaxg+jnxR4pdnh7Is7JkTLjVueNQZBAsmCbwHxMAPlszBMg0SHtn8N3cYby/zLAsyOFQTKQsjghFlm03x76Akq5krNDbYH+z4U1uXuPchaqb3Cwl8DKn7+OhfUUAQO7JpTTv/6gVevULuxIL6/Oi+dkoSlhvXXgfzZ5UImD5wkKftVoW9iOjasrIFQ39e49R5C8S4fJuvqGfAcwXR79K6Z1aB5Z4XJoJBkwX2U5F0iU1J0YxuOf2l4sWhhhsnWZA4DI6NfnL+0qHXFns11e18Q7kWUvo0Kd4TQtbCkrZtNIi6n1A8OeIVRgfEOfQHt41esWdscDQuXb0DokQs= incoforgetech\gaurav.26@LAP-TZ-0X107072
+[jenkins@ip-172-31-7-132 .ssh]$ nano authorized_keys
+[jenkins@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCBsD4URlEXIRYg8xjlFkrvPcWFRrrg25ffBFsuqBQbm5vtKowAp4I2RqIGWqpUNxkYpz5BruR3RRbDhr8MBSKlKvBE8trvpY53d+LtmdPkB6BhoGW61oyOxBJS7XCMsjBH5os+5ZM4t6DXAumfT1Dx8WxNmutBXmFrx41cKh950UpV7nT/xptM52FEoQHY3TI6Ski61/g1exXN6hIqOe11WiRgSoaHjmtu/e8KwbE3js4MlEwZlBBWvILR0OP38S00imjXbNN+s9HBS/SfvBX/RYZxrJH0WQvSvRJfMf4SWVilNrgx+ecQ06Gu1jK/LxYuGloIuGISYi9oimS09Fh/9BP7UMVIZEAD0rjrXabFGywqF0+fi/So8iac1XLJaJKpDon8U30q86cQYgiFI0nesQSllpeBZYc9pDSxbrJ56euNClTOoIEs/6xJb4yIMSq+r9w+y0mFbMMXfTWimStaP30mlWV+irfOQCgy6zSqJYx9+5T6HYAtHU5IoZh7gNE= ec2-user@ip-172-31-3-4.ap-south-1.compute.internal
+[jenkins@ip-172-31-7-132 .ssh]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.223.155
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:39:52 2025 from 157.49.10.159
+
+
+[root@ip-172-31-7-132 ec2-user]# client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.223.155
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 07:10:30 2025 from 157.49.10.159
+[ec2-user@ip-172-31-7-132 ~]$ su -jenkins
+su: invalid option -- 'j'
+Try 'su --help' for more information.
+[ec2-user@ip-172-31-7-132 ~]$ su - jenkins
+Password:
+Last login: Sat Nov 29 06:58:44 UTC 2025 from 3.110.176.121 on pts/2
+[jenkins@ip-172-31-7-132 ~]$ pwd
+/home/jenkins
+[jenkins@ip-172-31-7-132 ~]$ mkdir space
+[jenkins@ip-172-31-7-132 ~]$ cd space/
+[jenkins@ip-172-31-7-132 space]$ pwd
+/home/jenkins/space
+[jenkins@ip-172-31-7-132 space]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.223.155
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 07:17:31 2025 from 157.49.10.159
+[ec2-user@ip-172-31-7-132 ~]$ nano /etc/sudoers
+[ec2-user@ip-172-31-7-132 ~]$ sudo su
+[root@ip-172-31-7-132 ec2-user]# nano /etc/sudoers
+[root@ip-172-31-7-132 ec2-user]#
+[root@ip-172-31-7-132 ec2-user]#
+[root@ip-172-31-7-132 ec2-user]#
+[root@ip-172-31-7-132 ec2-user]# nano /etc/sudoers
+[root@ip-172-31-7-132 ec2-user]# vi /etc/sudoers
+[root@ip-172-31-7-132 ec2-user]# vi /etc/sudoers
+[root@ip-172-31-7-132 ec2-user]# cat /etc/sudoers
+## Sudoers allows particular users to run various commands as
+## the root user, without needing the root password.
+##
+## Examples are provided at the bottom of the file for collections
+## of related commands, which can then be delegated out to particular
+## users or groups.
+##
+## This file must be edited with the 'visudo' command.
+
+## Host Aliases
+## Groups of machines. You may prefer to use hostnames (perhaps using
+## wildcards for entire domains) or IP addresses instead.
+# Host_Alias     FILESERVERS = fs1, fs2
+# Host_Alias     MAILSERVERS = smtp, smtp2
+
+## User Aliases
+## These aren't often necessary, as you can use regular groups
+## (ie, from files, LDAP, NIS, etc) in this file - just use %groupname
+## rather than USERALIAS
+# User_Alias ADMINS = jsmith, mikem
+
+
+## Command Aliases
+## These are groups of related commands...
+
+## Networking
+# Cmnd_Alias NETWORKING = /sbin/route, /sbin/ifconfig, /bin/ping, /sbin/dhclient, /usr/bin/net, /sbin/iptables, /usr/bin/rfcomm, /usr/bin/wvdial, /sbin/iwconfig, /sbin/mii-tool
+
+## Installation and management of software
+# Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/up2date, /usr/bin/yum
+
+## Services
+# Cmnd_Alias SERVICES = /sbin/service, /sbin/chkconfig, /usr/bin/systemctl start, /usr/bin/systemctl stop, /usr/bin/systemctl reload, /usr/bin/systemctl restart, /usr/bin/systemctl status, /usr/bin/systemctl enable, /usr/bin/systemctl disable
+
+## Updating the locate database
+# Cmnd_Alias LOCATE = /usr/bin/updatedb
+
+## Storage
+# Cmnd_Alias STORAGE = /sbin/fdisk, /sbin/sfdisk, /sbin/parted, /sbin/partprobe, /bin/mount, /bin/umount
+
+## Delegating permissions
+# Cmnd_Alias DELEGATING = /usr/sbin/visudo, /bin/chown, /bin/chmod, /bin/chgrp
+
+## Processes
+# Cmnd_Alias PROCESSES = /bin/nice, /bin/kill, /usr/bin/kill, /usr/bin/killall
+
+## Drivers
+# Cmnd_Alias DRIVERS = /sbin/modprobe
+
+# Defaults specification
+
+#
+# Refuse to run if unable to disable echo on the tty.
+#
+Defaults   !visiblepw
+
+#
+# Preserving HOME has security implications since many programs
+# use it when searching for configuration files. Note that HOME
+# is already set when the the env_reset option is enabled, so
+# this option is only effective for configurations where either
+# env_reset is disabled or HOME is present in the env_keep list.
+#
+Defaults    always_set_home
+Defaults    match_group_by_gid
+
+# Prior to version 1.8.15, groups listed in sudoers that were not
+# found in the system group database were passed to the group
+# plugin, if any. Starting with 1.8.15, only groups of the form
+# %:group are resolved via the group plugin by default.
+# We enable always_query_group_plugin to restore old behavior.
+# Disable this option for new behavior.
+Defaults    always_query_group_plugin
+
+Defaults    env_reset
+Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS"
+Defaults    env_keep += "MAIL QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"
+Defaults    env_keep += "LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES"
+Defaults    env_keep += "LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE"
+Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY"
+
+#
+# Adding HOME to env_keep may enable a user to run unrestricted
+# commands via sudo.
+#
+# Defaults   env_keep += "HOME"
+
+Defaults    secure_path = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin
+
+## Next comes the main part: which users can run what software on
+## which machines (the sudoers file can be shared between multiple
+## systems).
+## Syntax:
+##
+##      user    MACHINE=COMMANDS
+##
+## The COMMANDS section may have other options added to it.
+##
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+jenkins ALL=(ALL) NOPASSWD: ALL
+## Allows members of the 'sys' group to run networking, software,
+## service management apps and more.
+# %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
+
+## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL)       ALL
+
+## Same thing without a password
+# %wheel        ALL=(ALL)       NOPASSWD: ALL
+
+## Allows members of the users group to mount and unmount the
+## cdrom as root
+# %users  ALL=/sbin/mount /mnt/cdrom, /sbin/umount /mnt/cdrom
+
+## Allows members of the users group to shutdown this system
+# %users  localhost=/sbin/shutdown -h now
+
+## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
+#includedir /etc/sudoers.d
+[root@ip-172-31-7-132 ec2-user]# nano /etc/sudoers
+[root@ip-172-31-7-132 ec2-user]# whoami
+root
+[root@ip-172-31-7-132 ec2-user]# pwd
+/home/ec2-user
+[root@ip-172-31-7-132 ec2-user]# cd ..
+[root@ip-172-31-7-132 home]# cd .
+[root@ip-172-31-7-132 home]# cd  ..
+[root@ip-172-31-7-132 /]#  cd etc
+[root@ip-172-31-7-132 etc]# ls
+DIR_COLORS                cifs-utils       fstab               issue.net       magic           pm                screenrc       sysctl.d
+DIR_COLORS.lightbgcolor   cloud            gcrypt              java            man_db.conf     popt.d            security       system-release
+GREP_COLORS               cron.daily       gnupg               jvm             mke2fs.conf     printcap          selinux        system-release-cpe
+NetworkManager            cron.hourly      groff               jvm-common      modprobe.d      profile           services       systemd
+X11                       cron.monthly     group               kernel          modules-load.d  profile.d         sestatus.conf  terminfo
+acpi                      cron.weekly      group-              keyutils        motd            protocols         sgml           tmpfiles.d
+adjtime                   crontab          grub.d              krb5.conf       motd.d          rc.d              shadow         trusted-key.key
+aliases                   crypto-policies  grub2-efi.cfg       krb5.conf.d     mtab            rc0.d             shadow-        udev
+alternatives              csh.cshrc        grub2.cfg           ld.so.cache     nanorc          rc1.d             shells         update-motd.d
+amazon                    csh.login        gshadow             ld.so.conf      netconfig       rc2.d             skel           vimrc
+amazon-linux-release      dbus-1           gshadow-            ld.so.conf.d    networks        rc3.d             ssh            virc
+amazon-linux-release-cpe  default          gss                 libaudit.conf   nfs.conf        rc4.d             ssl            wgetrc
+asound.conf               depmod.d         gssproxy            libibverbs.d    nfsmount.conf   rc5.d             sssd           xattr.conf
+at.deny                   dhcp             hibinit-config.cfg  libnl           nsswitch.conf   rc6.d             statetab.d     xdg
+audit                     dnf              host.conf           libreport       openldap        request-key.conf  subgid         xml
+bash_completion.d         dracut.conf      hostname            libuser.conf    opt             request-key.d     subgid-        yum.repos.d
+bashrc                    dracut.conf.d    hosts               locale.conf     os-release      resolv.conf       subuid
+bindresvport.blacklist    environment      idmapd.conf         localtime       pam.d           rpc               subuid-
+binfmt.d                  ethertypes       image-id            login.defs      passwd          rpm               sudo.conf
+chkconfig.d               exports          init.d              logrotate.conf  passwd-         rsyncd.conf       sudoers
+chrony.conf               exports.d        inittab             logrotate.d     pkcs11          rsyslog.d         sudoers.d
+chrony.d                  filesystems      inputrc             lsm             pkgconfig       rwtab.d           sysconfig
+chrony.keys               fonts            issue               machine-id      pki             sasl2             sysctl.conf
+[root@ip-172-31-7-132 etc]# nano sudoers
+[root@ip-172-31-7-132 etc]# nano sudoers
+[root@ip-172-31-7-132 etc]# Connection to 3.110.223.155 closed by remote host.
+Connection to 3.110.223.155 closed.
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.28.231
+The authenticity of host '3.110.28.231 (3.110.28.231)' can't be established.
+ED25519 key fingerprint is SHA256:kF6Z8tdzZSGjUGXxP/LABtlKoGc3SO68kvUmmFQjTSE.
+This host key is known by the following other names/addresses:
+    C:\Users\Gaurav.26/.ssh/known_hosts:211: 3.110.223.155
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '3.110.28.231' (ED25519) to the list of known hosts.
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 07:28:35 2025 from 103.146.111.100
+[ec2-user@ip-172-31-7-132 ~]$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .ssh
+[ec2-user@ip-172-31-7-132 ~]$ cd .ssh
+[ec2-user@ip-172-31-7-132 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMib+MG+AZ4eUQ1txycw16QZjFD5w30v/dFU+mmv5FvZWWi4w3Cqq1hP+tOwSWFfQS612jsYlU5IIFBaqbJk24tlCvQeRruGkODWtsZnvXTyPp0eEclEciM0Z0DaaVnW+pxGgWMV76HGbXGx48tGGpGJ6YRf0gbEhmjpGgxcVduT5Y0rBaxg+jnxR4pdnh7Is7JkTLjVueNQZBAsmCbwHxMAPlszBMg0SHtn8N3cYby/zLAsyOFQTKQsjghFlm03x76Akq5krNDbYH+z4U1uXuPchaqb3Cwl8DKn7+OhfUUAQO7JpTTv/6gVevULuxIL6/Oi+dkoSlhvXXgfzZ5UImD5wkKftVoW9iOjasrIFQ39e49R5C8S4fJuvqGfAcwXR79K6Z1aB5Z4XJoJBkwX2U5F0iU1J0YxuOf2l4sWhhhsnWZA4DI6NfnL+0qHXFns11e18Q7kWUvo0Kd4TQtbCkrZtNIi6n1A8OeIVRgfEOfQHt41esWdscDQuXb0DokQs= deployer-key
+[ec2-user@ip-172-31-7-132 .ssh]$ cd ..
+[ec2-user@ip-172-31-7-132 ~]$ ls
+[ec2-user@ip-172-31-7-132 ~]$ tree
+-bash: tree: command not found
+[ec2-user@ip-172-31-7-132 ~]$
+[ec2-user@ip-172-31-7-132 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>s
+'s' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>s
+'s' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.28.231
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 08:01:51 2025 from 103.146.111.124
+[ec2-user@ip-172-31-7-132 ~]$ ls
+[ec2-user@ip-172-31-7-132 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-7-132 ~]$ ls
+[ec2-user@ip-172-31-7-132 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.28.231
+ssh: connect to host 3.110.28.231 port 22: Connection timed out
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.28.231
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 08:28:08 2025 from 103.146.111.90
+[ec2-user@ip-172-31-7-132 ~]$ ls
+[ec2-user@ip-172-31-7-132 ~]$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .ssh
+[ec2-user@ip-172-31-7-132 ~]$ cd .ssh
+[ec2-user@ip-172-31-7-132 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMib+MG+AZ4eUQ1txycw16QZjFD5w30v/dFU+mmv5FvZWWi4w3Cqq1hP+tOwSWFfQS612jsYlU5IIFBaqbJk24tlCvQeRruGkODWtsZnvXTyPp0eEclEciM0Z0DaaVnW+pxGgWMV76HGbXGx48tGGpGJ6YRf0gbEhmjpGgxcVduT5Y0rBaxg+jnxR4pdnh7Is7JkTLjVueNQZBAsmCbwHxMAPlszBMg0SHtn8N3cYby/zLAsyOFQTKQsjghFlm03x76Akq5krNDbYH+z4U1uXuPchaqb3Cwl8DKn7+OhfUUAQO7JpTTv/6gVevULuxIL6/Oi+dkoSlhvXXgfzZ5UImD5wkKftVoW9iOjasrIFQ39e49R5C8S4fJuvqGfAcwXR79K6Z1aB5Z4XJoJBkwX2U5F0iU1J0YxuOf2l4sWhhhsnWZA4DI6NfnL+0qHXFns11e18Q7kWUvo0Kd4TQtbCkrZtNIi6n1A8OeIVRgfEOfQHt41esWdscDQuXb0DokQs= deployer-key
+[ec2-user@ip-172-31-7-132 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-7-132 .ssh]$ nano authorized_keys
+[ec2-user@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDARRiCuopmFvBgZwmsAUp1PKLD6elVYaupJwR0LrWZjvGAOSTDAugYQmV4g9pfYkJGuvPq5YIDxI5WQ4sCrzm1RwDVwtj6YrjXQli2Af8R1pdHYAwTsKtkMBPhL45FAV6hsemSxPJ4NiflBFjUKiPu4bq4sT6w9ssvXBLXB8ukQ5mgF8ZauBZBlzr5WN/ZqK4EseDdliPA6L21uwRu80/CiiEdHp253bEgStUGl//+KMut1ecUSmgOczZw51j84iD2wfe20y4aXVRvH7dlR6mTX2uaJwNigT9PpbZ77PZV36Bc2zWkxai3UOdpQ0u/izWZGjd8WBXPCrc1nsBePRx+GIoJ2DZ8I8f3Ta0EKTGmtUBPsnr32JHTigEXLGCl9KtPUI7SDL+r+VJdEMHk9ue8R15eaYpd0/P1RfEojXOLLPQyJhdBSXnoe836SBe5gNUfVniaNrZjnBVOZOIY65dlmFkziSk2F6aYLaqo6N1Q+rWM8diaDL4qe8r00nR+MFM= jenkins@ip-172-31-3-4.ap-south-1.compute.internal
+[ec2-user@ip-172-31-7-132 .ssh]$ cd ..
+[ec2-user@ip-172-31-7-132 ~]$ ls
+[ec2-user@ip-172-31-7-132 ~]$ su - jenkins
+Password:
+Last login: Sat Nov 29 07:17:47 UTC 2025 on pts/4
+[jenkins@ip-172-31-7-132 ~]$ ls
+space
+[jenkins@ip-172-31-7-132 ~]$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cache  .ssh  space
+[jenkins@ip-172-31-7-132 ~]$ cs .ss
+-bash: cs: command not found
+[jenkins@ip-172-31-7-132 ~]$ cd .ssh
+[jenkins@ip-172-31-7-132 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-7-132 .ssh]$ nano authorized_keys
+[jenkins@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDARRiCuopmFvBgZwmsAUp1PKLD6elVYaupJwR0LrWZjvGAOSTDAugYQmV4g9pfYkJGuvPq5YIDxI5WQ4sCrzm1RwDVwtj6YrjXQli2Af8R1pdHYAwTsKtkMBPhL45FAV6hsemSxPJ4NiflBFjUKiPu4bq4sT6w9ssvXBLXB8ukQ5mgF8ZauBZBlzr5WN/ZqK4EseDdliPA6L21uwRu80/CiiEdHp253bEgStUGl//+KMut1ecUSmgOczZw51j84iD2wfe20y4aXVRvH7dlR6mTX2uaJwNigT9PpbZ77PZV36Bc2zWkxai3UOdpQ0u/izWZGjd8WBXPCrc1nsBePRx+GIoJ2DZ8I8f3Ta0EKTGmtUBPsnr32JHTigEXLGCl9KtPUI7SDL+r+VJdEMHk9ue8R15eaYpd0/P1RfEojXOLLPQyJhdBSXnoe836SBe5gNUfVniaNrZjnBVOZOIY65dlmFkziSk2F6aYLaqo6N1Q+rWM8diaDL4qe8r00nR+MFM= jenkins@ip-172-31-3-4.ap-south-1.compute.internal
+[jenkins@ip-172-31-7-132 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-7-132 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDARRiCuopmFvBgZwmsAUp1PKLD6elVYaupJwR0LrWZjvGAOSTDAugYQmV4g9pfYkJGuvPq5YIDxI5WQ4sCrzm1RwDVwtj6YrjXQli2Af8R1pdHYAwTsKtkMBPhL45FAV6hsemSxPJ4NiflBFjUKiPu4bq4sT6w9ssvXBLXB8ukQ5mgF8ZauBZBlzr5WN/ZqK4EseDdliPA6L21uwRu80/CiiEdHp253bEgStUGl//+KMut1ecUSmgOczZw51j84iD2wfe20y4aXVRvH7dlR6mTX2uaJwNigT9PpbZ77PZV36Bc2zWkxai3UOdpQ0u/izWZGjd8WBXPCrc1nsBePRx+GIoJ2DZ8I8f3Ta0EKTGmtUBPsnr32JHTigEXLGCl9KtPUI7SDL+r+VJdEMHk9ue8R15eaYpd0/P1RfEojXOLLPQyJhdBSXnoe836SBe5gNUfVniaNrZjnBVOZOIY65dlmFkziSk2F6aYLaqo6N1Q+rWM8diaDL4qe8r00nR+MFM= jenkins@ip-172-31-3-4.ap-south-1.compute.internal
+[jenkins@ip-172-31-7-132 .ssh]$ exit
+logout
+
+
+[root@ip-172-31-7-132 ec2-user]# cd /etc
+[root@ip-172-31-7-132 etc]# ls
+DIR_COLORS                cifs-utils       fstab               issue.net       magic           pm                screenrc       sysctl.d
+DIR_COLORS.lightbgcolor   cloud            gcrypt              java            man_db.conf     popt.d            security       system-release
+GREP_COLORS               cron.daily       gnupg               jvm             mke2fs.conf     printcap          selinux        system-release-cpe
+NetworkManager            cron.hourly      groff               jvm-common      modprobe.d      profile           services       systemd
+X11                       cron.monthly     group               kernel          modules-load.d  profile.d         sestatus.conf  terminfo
+acpi                      cron.weekly      group-              keyutils        motd            protocols         sgml           tmpfiles.d
+adjtime                   crontab          grub.d              krb5.conf       motd.d          rc.d              shadow         trusted-key.key
+aliases                   crypto-policies  grub2-efi.cfg       krb5.conf.d     mtab            rc0.d             shadow-        udev
+alternatives              csh.cshrc        grub2.cfg           ld.so.cache     nanorc          rc1.d             shells         update-motd.d
+amazon                    csh.login        gshadow             ld.so.conf      netconfig       rc2.d             skel           vimrc
+amazon-linux-release      dbus-1           gshadow-            ld.so.conf.d    networks        rc3.d             ssh            virc
+amazon-linux-release-cpe  default          gss                 libaudit.conf   nfs.conf        rc4.d             ssl            wgetrc
+asound.conf               depmod.d         gssproxy            libibverbs.d    nfsmount.conf   rc5.d             sssd           xattr.conf
+at.deny                   dhcp             hibinit-config.cfg  libnl           nsswitch.conf   rc6.d             statetab.d     xdg
+audit                     dnf              host.conf           libreport       openldap        request-key.conf  subgid         xml
+bash_completion.d         dracut.conf      hostname            libuser.conf    opt             request-key.d     subgid-        yum.repos.d
+bashrc                    dracut.conf.d    hosts               locale.conf     os-release      resolv.conf       subuid
+bindresvport.blacklist    environment      idmapd.conf         localtime       pam.d           rpc               subuid-
+binfmt.d                  ethertypes       image-id            login.defs      passwd          rpm               sudo.conf
+chkconfig.d               exports          init.d              logrotate.conf  passwd-         rsyncd.conf       sudoers
+chrony.conf               exports.d        inittab             logrotate.d     pkcs11          rsyslog.d         sudoers.d
+chrony.d                  filesystems      inputrc             lsm             pkgconfig       rwtab.d           sysconfig
+chrony.keys               fonts            issue               machine-id      pki             sasl2             sysctl.conf
+[root@ip-172-31-7-132 etc]# pwd
+/etc
+[root@ip-172-31-7-132 etc]# copy sudoers /home
+bash: copy: command not found
+[root@ip-172-31-7-132 etc]# cp sudoers /home
+[root@ip-172-31-7-132 etc]# cd ..
+[root@ip-172-31-7-132 /]# ls
+bin  boot  dev  etc  home  lib  lib64  local  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@ip-172-31-7-132 /]# pwd
+/
+[root@ip-172-31-7-132 /]# cd ~
+[root@ip-172-31-7-132 ~]# ls
+[root@ip-172-31-7-132 ~]# pwd
+/root
+[root@ip-172-31-7-132 ~]# cd /home
+[root@ip-172-31-7-132 home]# ls
+ec2-user  jenkins  sudoers
+[root@ip-172-31-7-132 home]# cd ..
+[root@ip-172-31-7-132 /]# cd etc
+[root@ip-172-31-7-132 etc]# rm -rf sudoers
+[root@ip-172-31-7-132 etc]# ls
+DIR_COLORS                chrony.keys      filesystems         inittab        logrotate.conf  passwd            rpc            subuid
+DIR_COLORS.lightbgcolor   cifs-utils       fonts               inputrc        logrotate.d     passwd-           rpm            subuid-
+GREP_COLORS               cloud            fstab               issue          lsm             pkcs11            rsyncd.conf    sudo.conf
+NetworkManager            cron.daily       gcrypt              issue.net      machine-id      pkgconfig         rsyslog.d      sudoers.d
+X11                       cron.hourly      gnupg               java           magic           pki               rwtab.d        sysconfig
+acpi                      cron.monthly     groff               jvm            man_db.conf     pm                sasl2          sysctl.conf
+adjtime                   cron.weekly      group               jvm-common     mke2fs.conf     popt.d            screenrc       sysctl.d
+aliases                   crontab          group-              kernel         modprobe.d      printcap          security       system-release
+alternatives              crypto-policies  grub.d              keyutils       modules-load.d  profile           selinux        system-release-cpe
+amazon                    csh.cshrc        grub2-efi.cfg       krb5.conf      motd            profile.d         services       systemd
+amazon-linux-release      csh.login        grub2.cfg           krb5.conf.d    motd.d          protocols         sestatus.conf  terminfo
+amazon-linux-release-cpe  dbus-1           gshadow             ld.so.cache    mtab            rc.d              sgml           tmpfiles.d
+asound.conf               default          gshadow-            ld.so.conf     nanorc          rc0.d             shadow         trusted-key.key
+at.deny                   depmod.d         gss                 ld.so.conf.d   netconfig       rc1.d             shadow-        udev
+audit                     dhcp             gssproxy            libaudit.conf  networks        rc2.d             shells         update-motd.d
+bash_completion.d         dnf              hibinit-config.cfg  libibverbs.d   nfs.conf        rc3.d             skel           vimrc
+bashrc                    dracut.conf      host.conf           libnl          nfsmount.conf   rc4.d             ssh            virc
+bindresvport.blacklist    dracut.conf.d    hostname            libreport      nsswitch.conf   rc5.d             ssl            wgetrc
+binfmt.d                  environment      hosts               libuser.conf   openldap        rc6.d             sssd           xattr.conf
+chkconfig.d               ethertypes       idmapd.conf         locale.conf    opt             request-key.conf  statetab.d     xdg
+chrony.conf               exports          image-id            localtime      os-release      request-key.d     subgid         xml
+chrony.d                  exports.d        init.d              login.defs     pam.d           resolv.conf       subgid-        yum.repos.d
+[root@ip-172-31-7-132 etc]# cd ..
+[root@ip-172-31-7-132 /]# ls
+bin  boot  dev  etc  home  lib  lib64  local  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@ip-172-31-7-132 /]# cd etc
+[root@ip-172-31-7-132 etc]# ls
+DIR_COLORS                chrony.keys      filesystems         inittab        logrotate.conf  passwd            rpc            subuid
+DIR_COLORS.lightbgcolor   cifs-utils       fonts               inputrc        logrotate.d     passwd-           rpm            subuid-
+GREP_COLORS               cloud            fstab               issue          lsm             pkcs11            rsyncd.conf    sudo.conf
+NetworkManager            cron.daily       gcrypt              issue.net      machine-id      pkgconfig         rsyslog.d      sudoers.d
+X11                       cron.hourly      gnupg               java           magic           pki               rwtab.d        sysconfig
+acpi                      cron.monthly     groff               jvm            man_db.conf     pm                sasl2          sysctl.conf
+adjtime                   cron.weekly      group               jvm-common     mke2fs.conf     popt.d            screenrc       sysctl.d
+aliases                   crontab          group-              kernel         modprobe.d      printcap          security       system-release
+alternatives              crypto-policies  grub.d              keyutils       modules-load.d  profile           selinux        system-release-cpe
+amazon                    csh.cshrc        grub2-efi.cfg       krb5.conf      motd            profile.d         services       systemd
+amazon-linux-release      csh.login        grub2.cfg           krb5.conf.d    motd.d          protocols         sestatus.conf  terminfo
+amazon-linux-release-cpe  dbus-1           gshadow             ld.so.cache    mtab            rc.d              sgml           tmpfiles.d
+asound.conf               default          gshadow-            ld.so.conf     nanorc          rc0.d             shadow         trusted-key.key
+at.deny                   depmod.d         gss                 ld.so.conf.d   netconfig       rc1.d             shadow-        udev
+audit                     dhcp             gssproxy            libaudit.conf  networks        rc2.d             shells         update-motd.d
+bash_completion.d         dnf              hibinit-config.cfg  libibverbs.d   nfs.conf        rc3.d             skel           vimrc
+bashrc                    dracut.conf      host.conf           libnl          nfsmount.conf   rc4.d             ssh            virc
+bindresvport.blacklist    dracut.conf.d    hostname            libreport      nsswitch.conf   rc5.d             ssl            wgetrc
+binfmt.d                  environment      hosts               libuser.conf   openldap        rc6.d             sssd           xattr.conf
+chkconfig.d               ethertypes       idmapd.conf         locale.conf    opt             request-key.conf  statetab.d     xdg
+chrony.conf               exports          image-id            localtime      os-release      request-key.d     subgid         xml
+chrony.d                  exports.d        init.d              login.defs     pam.d           resolv.conf       subgid-        yum.repos.d
+[root@ip-172-31-7-132 etc]# cp /home/sudoers .
+[root@ip-172-31-7-132 etc]# ls
+DIR_COLORS                cifs-utils       fstab               issue.net       magic           pm                screenrc       sysctl.d
+DIR_COLORS.lightbgcolor   cloud            gcrypt              java            man_db.conf     popt.d            security       system-release
+GREP_COLORS               cron.daily       gnupg               jvm             mke2fs.conf     printcap          selinux        system-release-cpe
+NetworkManager            cron.hourly      groff               jvm-common      modprobe.d      profile           services       systemd
+X11                       cron.monthly     group               kernel          modules-load.d  profile.d         sestatus.conf  terminfo
+acpi                      cron.weekly      group-              keyutils        motd            protocols         sgml           tmpfiles.d
+adjtime                   crontab          grub.d              krb5.conf       motd.d          rc.d              shadow         trusted-key.key
+aliases                   crypto-policies  grub2-efi.cfg       krb5.conf.d     mtab            rc0.d             shadow-        udev
+alternatives              csh.cshrc        grub2.cfg           ld.so.cache     nanorc          rc1.d             shells         update-motd.d
+amazon                    csh.login        gshadow             ld.so.conf      netconfig       rc2.d             skel           vimrc
+amazon-linux-release      dbus-1           gshadow-            ld.so.conf.d    networks        rc3.d             ssh            virc
+amazon-linux-release-cpe  default          gss                 libaudit.conf   nfs.conf        rc4.d             ssl            wgetrc
+asound.conf               depmod.d         gssproxy            libibverbs.d    nfsmount.conf   rc5.d             sssd           xattr.conf
+at.deny                   dhcp             hibinit-config.cfg  libnl           nsswitch.conf   rc6.d             statetab.d     xdg
+audit                     dnf              host.conf           libreport       openldap        request-key.conf  subgid         xml
+bash_completion.d         dracut.conf      hostname            libuser.conf    opt             request-key.d     subgid-        yum.repos.d
+bashrc                    dracut.conf.d    hosts               locale.conf     os-release      resolv.conf       subuid
+bindresvport.blacklist    environment      idmapd.conf         localtime       pam.d           rpc               subuid-
+binfmt.d                  ethertypes       image-id            login.defs      passwd          rpm               sudo.conf
+chkconfig.d               exports          init.d              logrotate.conf  passwd-         rsyncd.conf       sudoers
+chrony.conf               exports.d        inittab             logrotate.d     pkcs11          rsyslog.d         sudoers.d
+chrony.d                  filesystems      inputrc             lsm             pkgconfig       rwtab.d           sysconfig
+chrony.keys               fonts            issue               machine-id      pki             sasl2             sysctl.conf
+[root@ip-172-31-7-132 etc]# nano sudoers
+[root@ip-172-31-7-132 etc]# sudo visudo
+[root@ip-172-31-7-132 etc]# sudo visudo
+
+
+[root@ip-172-31-7-132 etc]#
+echo 'jenkins ALL=(ALL) NOPASSWD: ALL' | sudo tee /etc/sudoers.d/jenkins
+echo 'Defaults:jenkins !requiretty' | sudo tee -a /etc/sudoers.d/jenkins
+sudo chmod 440 /etc/sudoers.d/jenkins
+jenkins ALL=(ALL) NOPASSWD: ALL
+Defaults:jenkins !requiretty
+[root@ip-172-31-7-132 etc]# ls -l
+total 1156
+-rw-r--r--.  1 root root     4673 Sep 12 18:12 DIR_COLORS
+-rw-r--r--.  1 root root     4755 Sep 12 18:12 DIR_COLORS.lightbgcolor
+-rw-r--r--.  1 root root       94 Jan 30  2023 GREP_COLORS
+drwxr-xr-x.  3 root root       26 Nov  8 08:16 NetworkManager
+drwxr-xr-x.  6 root root       70 Nov  8 08:16 X11
+drwxr-xr-x.  4 root root       35 Nov  8 08:16 acpi
+-rw-r--r--.  1 root root       16 Nov  8 08:17 adjtime
+-rw-r--r--.  1 root root     1529 Jun 23  2020 aliases
+drwxr-xr-x.  2 root root    16384 Nov 29 06:32 alternatives
+drwxr-xr-x.  3 root root       17 Nov  8 08:17 amazon
+lrwxrwxrwx.  1 root root       25 Nov  5 00:38 amazon-linux-release -> ../usr/lib/system-release
+lrwxrwxrwx.  1 root root       29 Nov  5 00:38 amazon-linux-release-cpe -> ../usr/lib/system-release-cpe
+-rw-r--r--.  1 root root       55 Jan 30  2023 asound.conf
+-rw-r--r--.  1 root root        1 Jan 30  2023 at.deny
+drwxr-x---.  4 root root      100 Nov 29 06:27 audit
+drwxr-xr-x.  2 root root       30 Nov  8 08:16 bash_completion.d
+-rw-r--r--.  1 root root     3019 Jun 23  2020 bashrc
+-rw-r--r--.  1 root root      535 Feb  2  2023 bindresvport.blacklist
+drwxr-xr-x.  2 root root        6 Oct  7 15:09 binfmt.d
+drwxr-xr-x.  2 root root        6 Jan 29  2023 chkconfig.d
+-rw-r--r--.  1 root root     1425 Jan 13  2025 chrony.conf
+drwxr-xr-x.  2 root root       20 Nov  8 08:16 chrony.d
+-rw-r-----.  1 root chrony    540 Aug 29  2022 chrony.keys
+drwxr-xr-x.  2 root root       26 Nov  8 08:16 cifs-utils
+drwxr-xr-x.  4 root root       59 Nov  8 08:16 cloud
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.daily
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.hourly
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.monthly
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.weekly
+-rw-r--r--.  1 root root      451 Jan 30  2023 crontab
+drwxr-xr-x.  6 root root       81 Nov  8 08:16 crypto-policies
+-rw-r--r--.  1 root root     1657 Jun 23  2020 csh.cshrc
+-rw-r--r--.  1 root root     1093 Jun 23  2020 csh.login
+drwxr-xr-x.  4 root root       78 Nov  8 08:15 dbus-1
+drwxr-xr-x.  2 root root       33 Nov  8 08:17 default
+drwxr-xr-x.  2 root root        6 Jan 31  2023 depmod.d
+drwxr-xr-x.  3 root root       56 Nov  8 08:17 dhcp
+drwxr-xr-x.  8 root root      128 Nov  8 08:15 dnf
+-rw-r--r--.  1 root root      117 Oct 25  2024 dracut.conf
+drwxr-xr-x.  2 root root       22 Nov  8 08:17 dracut.conf.d
+-rw-r--r--.  1 root root        0 Jan 30  2023 environment
+-rw-r--r--.  1 root root     1362 Jun 23  2020 ethertypes
+-rw-r--r--.  1 root root        0 Jun 23  2020 exports
+drwxr-xr-x.  2 root root        6 Feb  1  2023 exports.d
+-rw-r--r--.  1 root root       66 Jun 23  2020 filesystems
+drwxr-xr-x.  3 root root       38 Nov 29 06:32 fonts
+-rw-r--r--.  1 root root      217 Nov  8 08:17 fstab
+drwxr-xr-x.  2 root root        6 Oct  4  2024 gcrypt
+drwxr-xr-x.  2 root root        6 Nov  8 08:15 gnupg
+drwxr-xr-x.  4 root root       40 Nov  8 08:15 groff
+-rw-r--r--.  1 root root      765 Nov 29 06:33 group
+-rw-r--r--.  1 root root      757 Nov 29 06:33 group-
+drwx------.  2 root root      253 Nov  8 08:16 grub.d
+lrwxrwxrwx.  1 root root       22 Oct 13 08:21 grub2-efi.cfg -> ../boot/grub2/grub.cfg
+lrwxrwxrwx.  1 root root       22 Oct 13 08:21 grub2.cfg -> ../boot/grub2/grub.cfg
+----------.  1 root root      637 Nov 29 06:33 gshadow
+----------.  1 root root      629 Nov 29 06:33 gshadow-
+drwxr-xr-x.  3 root root       20 Nov  8 08:16 gss
+drwxr-xr-x.  2 root root       87 Nov  8 08:17 gssproxy
+-rw-r--r--.  1 root root     1047 Jan 25  2024 hibinit-config.cfg
+-rw-r--r--.  1 root root        9 Jun 23  2020 host.conf
+-rw-r--r--.  1 root root       44 Nov 29 06:27 hostname
+-rw-r--r--.  1 root root      126 Nov  8 08:17 hosts
+-rw-r--r--.  1 root root     5799 Feb  1  2023 idmapd.conf
+-rw-r--r--.  1 root root      270 Nov  8 08:17 image-id
+lrwxrwxrwx.  1 root root       11 Jan 29  2023 init.d -> rc.d/init.d
+-rw-r--r--.  1 root root      490 Oct  7 15:09 inittab
+-rw-r--r--.  1 root root      943 Jun 23  2020 inputrc
+lrwxrwxrwx.  1 root root       16 Nov  5 00:38 issue -> ../usr/lib/issue
+lrwxrwxrwx.  1 root root       20 Nov  5 00:38 issue.net -> ../usr/lib/issue.net
+drwxr-xr-x.  3 root root       22 Nov 29 06:32 java
+drwxr-xr-x.  2 root root        6 Sep 26  2023 jvm
+drwxr-xr-x.  2 root root        6 Sep 26  2023 jvm-common
+drwxr-xr-x.  3 root root       38 Nov  8 08:18 kernel
+drwxr-xr-x.  2 root root        6 Feb 25  2025 keyutils
+-rw-r--r--.  1 root root      880 Aug 26 18:34 krb5.conf
+drwxr-xr-x.  2 root root       55 Nov  8 08:17 krb5.conf.d
+-rw-r--r--.  1 root root    16899 Nov 29 09:06 ld.so.cache
+-rw-r--r--.  1 root root       28 Sep  3 03:41 ld.so.conf
+drwxr-xr-x.  2 root root       33 Nov  8 08:16 ld.so.conf.d
+-rw-r-----.  1 root root      191 Jul 29  2024 libaudit.conf
+drwxr-xr-x.  2 root root    16384 Nov  8 08:15 libibverbs.d
+drwxr-xr-x.  2 root root       35 Nov  8 08:15 libnl
+drwxr-xr-x.  6 root root       70 Nov  8 08:15 libreport
+-rw-r--r--.  1 root root     2391 Mar  1  2021 libuser.conf
+-rw-r--r--.  1 root root       79 Nov 29 06:27 locale.conf
+-rw-r--r--.  1 root root      114 Nov  8 08:17 localtime
+-rw-r--r--.  1 root root     8402 Nov 20  2023 login.defs
+-rw-r--r--.  1 root root      493 Apr 16  2021 logrotate.conf
+drwxr-xr-x.  2 root root       81 Nov  8 08:17 logrotate.d
+drwxr-xr-x.  3 root root       43 Nov  8 08:16 lsm
+-r--r--r--.  1 root root       33 Nov 29 06:27 machine-id
+-rw-r--r--.  1 root root      111 Aug 30  2023 magic
+-rw-r--r--.  1 root root     5235 Feb  1  2023 man_db.conf
+-rw-r--r--.  1 root root      782 Jan 30  2023 mke2fs.conf
+drwxr-xr-x.  2 root root       24 Nov  8 08:17 modprobe.d
+drwxr-xr-x.  2 root root        6 Oct  7 15:09 modules-load.d
+lrwxrwxrwx.  1 root root       25 Nov  8 08:17 motd -> /var/lib/update-motd/motd
+drwxr-xr-x.  2 root root        6 Jan 30  2023 motd.d
+lrwxrwxrwx.  1 root root       19 Nov  8 08:16 mtab -> ../proc/self/mounts
+-rw-r--r--.  1 root root    11926 Feb 19  2025 nanorc
+-rw-r--r--.  1 root root      767 Feb  2  2023 netconfig
+-rw-r--r--.  1 root root       58 Jun 23  2020 networks
+-rw-r--r--.  1 root root     1439 Feb  1  2023 nfs.conf
+-rw-r--r--.  1 root root     3606 Feb  1  2023 nfsmount.conf
+-rw-r--r--.  1 root root     2108 Sep  3 18:30 nsswitch.conf
+drwxr-xr-x.  3 root root       36 Nov  8 08:16 openldap
+drwxr-xr-x.  2 root root        6 Jan 30  2023 opt
+lrwxrwxrwx.  1 root root       21 Nov  5 00:38 os-release -> ../usr/lib/os-release
+drwxr-xr-x.  2 root root    16384 Nov  8 08:17 pam.d
+-rw-r--r--.  1 root root     1564 Nov 29 06:33 passwd
+-rw-r--r--.  1 root root     1519 Nov 29 06:27 passwd-
+drwxr-xr-x.  3 root root       21 Nov  8 08:15 pkcs11
+drwxr-xr-x.  3 root root       27 Nov  8 08:16 pkgconfig
+drwxr-xr-x.  7 root root       73 Nov  8 08:16 pki
+drwxr-xr-x.  5 root root       52 Nov  8 08:15 pm
+drwxr-xr-x.  2 root root        6 Jan 29  2023 popt.d
+-rw-r--r--.  1 root root      233 Jun 23  2020 printcap
+-rw-r--r--.  1 root root     1816 Jun 23  2020 profile
+drwxr-xr-x.  2 root root    16384 Nov  8 08:17 profile.d
+-rw-r--r--.  1 root root     6568 Jun 23  2020 protocols
+drwxr-xr-x. 10 root root      111 Jan 31  2023 rc.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc6.d -> rc.d/rc6.d
+-rw-r--r--.  1 root root     1787 Feb 25  2025 request-key.conf
+drwxr-xr-x.  2 root root       30 Nov  8 08:17 request-key.d
+lrwxrwxrwx.  1 root root       32 Nov  8 08:16 resolv.conf -> /run/systemd/resolve/resolv.conf
+-rw-r--r--.  1 root root     1634 Aug  2  2021 rpc
+drwxr-xr-x.  2 root root        6 Feb 26  2024 rpm
+-rw-r--r--.  1 root root      458 Jan 15  2025 rsyncd.conf
+drwxr-xr-x.  2 root root       31 Nov  8 08:16 rsyslog.d
+drwxr-xr-x.  2 root root       51 Nov  8 08:16 rwtab.d
+drwxr-xr-x.  2 root root        6 Jan 30  2023 sasl2
+-rw-r--r--.  1 root root     6720 Jun  2 21:55 screenrc
+drwxr-xr-x.  7 root root    16384 Nov  8 08:16 security
+drwxr-xr-x.  3 root root       57 Nov  8 08:17 selinux
+-rw-r--r--.  1 root root   692252 Jun 23  2020 services
+-rw-r--r--.  1 root root      216 Feb  1  2023 sestatus.conf
+drwxr-xr-x.  3 root root       21 Nov 29 06:32 sgml
+----------.  1 root root      888 Nov 29 06:33 shadow
+----------.  1 root root      754 Nov 29 06:27 shadow-
+-rw-r--r--.  1 root root       90 Nov  8 08:17 shells
+drwxr-xr-x.  2 root root       62 Jan 30  2023 skel
+drwxr-xr-x.  4 root root      214 Nov 29 06:27 ssh
+drwxr-xr-x.  2 root root       91 Nov  8 08:16 ssl
+drwx------.  4 root root       31 Nov  8 08:16 sssd
+drwxr-xr-x.  2 root root        6 Jan 30  2023 statetab.d
+-rw-r--r--.  1 root root       43 Nov 29 06:33 subgid
+-rw-r--r--.  1 root root       22 Nov 29 06:27 subgid-
+-rw-r--r--.  1 root root       43 Nov 29 06:33 subuid
+-rw-r--r--.  1 root root       22 Nov 29 06:27 subuid-
+-rw-r-----.  1 root root     4316 Jun 30 16:02 sudo.conf
+-r--r-----.  1 root root     4437 Nov 29 09:01 sudoers
+drwxr-x---.  2 root root       48 Nov 29 09:05 sudoers.d
+drwxr-xr-x.  5 root root    16384 Nov  8 08:17 sysconfig
+-rw-r--r--.  1 root root      449 Oct  7 15:09 sysctl.conf
+drwxr-xr-x.  2 root root       52 Nov  8 08:17 sysctl.d
+lrwxrwxrwx.  1 root root       25 Nov  5 00:38 system-release -> ../usr/lib/system-release
+lrwxrwxrwx.  1 root root       29 Nov  5 00:38 system-release-cpe -> ../usr/lib/system-release-cpe
+drwxr-xr-x.  6 root root    16384 Nov  8 08:17 systemd
+drwxr-xr-x.  2 root root        6 Feb 26  2024 terminfo
+drwxr-xr-x.  2 root root        6 Oct  7 15:09 tmpfiles.d
+-rw-r--r--.  1 root root      375 Oct 23 23:36 trusted-key.key
+drwxr-xr-x.  4 root root       68 Nov  8 08:17 udev
+drwxr-xr-x.  2 root root       34 Nov 22  2024 update-motd.d
+-rw-r--r--.  1 root root     4017 Aug  4 16:45 vimrc
+-rw-r--r--.  1 root root     1183 Aug  4 16:45 virc
+-rw-r--r--.  1 root root     4925 Jul  8  2024 wgetrc
+-rw-r--r--.  1 root root      817 Jan 29  2023 xattr.conf
+drwxr-xr-x.  4 root root       38 Nov  8 08:16 xdg
+drwxr-xr-x.  2 root root       21 Nov 29 06:32 xml
+drwxr-xr-x.  2 root root       59 Nov  5 00:38 yum.repos.d
+[root@ip-172-31-7-132 etc]# which httpd
+/usr/bin/which: no httpd in (/root/.local/bin:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin)
+[root@ip-172-31-7-132 etc]# which git
+/usr/bin/git
+[root@ip-172-31-7-132 etc]# which git
+/usr/bin/which: no git in (/root/.local/bin:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin)
+[root@ip-172-31-7-132 etc]#

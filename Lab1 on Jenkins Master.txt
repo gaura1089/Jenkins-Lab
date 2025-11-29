@@ -1,0 +1,812 @@
+Microsoft Windows [Version 10.0.22631.6199]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i ec2-user@3.110.176.121
+Warning: Identity file ec2-user@3.110.176.121 not accessible: No such file or directory.
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address]
+           [-c cipher_spec] [-D [bind_address:]port] [-E log_file]
+           [-e escape_char] [-F configfile] [-I pkcs11] [-i identity_file]
+           [-J destination] [-L address] [-l login_name] [-m mac_spec]
+           [-O ctl_cmd] [-o option] [-P tag] [-p port] [-Q query_option]
+           [-R address] [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]]
+           destination [command [argument ...]]
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+The authenticity of host '3.110.176.121 (3.110.176.121)' can't be established.
+ED25519 key fingerprint is SHA256:MG+z1Sg+7ee7gR7N8H6/ojil6F+ALJSuy3YW5+RxIQ8.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '3.110.176.121' (ED25519) to the list of known hosts.
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:27:16 2025 from 103.146.111.108
+[ec2-user@ip-172-31-3-4 ~]$
+[ec2-user@ip-172-31-3-4 ~]$ java -v
+Unrecognized option: -v
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+[ec2-user@ip-172-31-3-4 ~]$ java -version
+openjdk version "21.0.9" 2025-10-21 LTS
+OpenJDK Runtime Environment Corretto-21.0.9.10.1 (build 21.0.9+10-LTS)
+OpenJDK 64-Bit Server VM Corretto-21.0.9.10.1 (build 21.0.9+10-LTS, mixed mode, sharing)
+[ec2-user@ip-172-31-3-4 ~]$
+[ec2-user@ip-172-31-3-4 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:29:24 2025 from 103.146.111.108
+[ec2-user@ip-172-31-3-4 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:41:20 2025 from 157.49.10.159
+[ec2-user@ip-172-31-3-4 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-3-4 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[ec2-user@ip-172-31-3-4 ~]$ cd .ssh
+[ec2-user@ip-172-31-3-4 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-3-4 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMib+MG+AZ4eUQ1txycw16QZjFD5w30v/dFU+mmv5FvZWWi4w3Cqq1hP+tOwSWFfQS612jsYlU5IIFBaqbJk24tlCvQeRruGkODWtsZnvXTyPp0eEclEciM0Z0DaaVnW+pxGgWMV76HGbXGx48tGGpGJ6YRf0gbEhmjpGgxcVduT5Y0rBaxg+jnxR4pdnh7Is7JkTLjVueNQZBAsmCbwHxMAPlszBMg0SHtn8N3cYby/zLAsyOFQTKQsjghFlm03x76Akq5krNDbYH+z4U1uXuPchaqb3Cwl8DKn7+OhfUUAQO7JpTTv/6gVevULuxIL6/Oi+dkoSlhvXXgfzZ5UImD5wkKftVoW9iOjasrIFQ39e49R5C8S4fJuvqGfAcwXR79K6Z1aB5Z4XJoJBkwX2U5F0iU1J0YxuOf2l4sWhhhsnWZA4DI6NfnL+0qHXFns11e18Q7kWUvo0Kd4TQtbCkrZtNIi6n1A8OeIVRgfEOfQHt41esWdscDQuXb0DokQs= deployer-key
+[ec2-user@ip-172-31-3-4 .ssh]$ cd ..
+[ec2-user@ip-172-31-3-4 ~]$ ls
+[ec2-user@ip-172-31-3-4 ~]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ec2-user/.ssh/id_rsa): id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa
+Your public key has been saved in id_rsa.pub
+The key fingerprint is:
+SHA256:tIHK9KGHCNSAu6+RqOghk7MoTWnuWZwC0W2QqCZp2DA ec2-user@ip-172-31-3-4.ap-south-1.compute.internal
+The key's randomart image is:
++---[RSA 3072]----+
+|.++.             |
+|E..+   .         |
+|=*. + o o        |
+|*=.= = o o       |
+|=...= o S        |
+|o++. o           |
+|OB. +            |
+|*==+             |
+|O+o              |
++----[SHA256]-----+
+[ec2-user@ip-172-31-3-4 ~]$ cd .ss
+-bash: cd: .ss: No such file or directory
+[ec2-user@ip-172-31-3-4 ~]$ cd .ssh
+[ec2-user@ip-172-31-3-4 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-3-4 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-3-4 .ssh]$ ls -a
+.  ..  authorized_keys
+[ec2-user@ip-172-31-3-4 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMib+MG+AZ4eUQ1txycw16QZjFD5w30v/dFU+mmv5FvZWWi4w3Cqq1hP+tOwSWFfQS612jsYlU5IIFBaqbJk24tlCvQeRruGkODWtsZnvXTyPp0eEclEciM0Z0DaaVnW+pxGgWMV76HGbXGx48tGGpGJ6YRf0gbEhmjpGgxcVduT5Y0rBaxg+jnxR4pdnh7Is7JkTLjVueNQZBAsmCbwHxMAPlszBMg0SHtn8N3cYby/zLAsyOFQTKQsjghFlm03x76Akq5krNDbYH+z4U1uXuPchaqb3Cwl8DKn7+OhfUUAQO7JpTTv/6gVevULuxIL6/Oi+dkoSlhvXXgfzZ5UImD5wkKftVoW9iOjasrIFQ39e49R5C8S4fJuvqGfAcwXR79K6Z1aB5Z4XJoJBkwX2U5F0iU1J0YxuOf2l4sWhhhsnWZA4DI6NfnL+0qHXFns11e18Q7kWUvo0Kd4TQtbCkrZtNIi6n1A8OeIVRgfEOfQHt41esWdscDQuXb0DokQs= deployer-key
+[ec2-user@ip-172-31-3-4 .ssh]$ ls
+authorized_keys
+[ec2-user@ip-172-31-3-4 .ssh]$ cd ..
+[ec2-user@ip-172-31-3-4 ~]$ ls
+id_rsa  id_rsa.pub
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAYEAgbA+FEZRFyEWIPMY5RZK7z3FhUa64NuX3wRbLqgUG5ub7SqMAKeC
+NkaiBlqqVDcZGKc+Qa7kd0UWw4a/DAUipSrwRPLa76WOd3fi7ZnT5AegYaBlutaMjsQSUu
+1wjLIwR+aLPuWTOLeg1wLpn09Q8fFsTZrrQV5ha8eNXCofedFKVe50/8abTOdhRKEB2N0y
+OkpIutf4NXsVzeoSKjntdVokYEqGh45rbv3vCsGxN47ODJRMGZQQVryC0dDj9/EtNIpo12
+zTfrPRwUv0n7wV/0WGcayR9FkL0r0SXzH+EllYpTa4MfnnENOhrtYyvy8WLhpaCLhiEmIv
+aIpktPRYf/QT+1DFSGRAA9K4612mxRssKhdPn4v0qPImnNVyyWiSqQ6J/FN9KvOnEGIIhS
+NJ3rEEpZaXgWWHPaQ0sW6yeenrjQpUzqCBLP+sSW+MiDEqvq/cPstJhWzDF301opkrWj99
+JpVlfoq3zkAoMus0qiWMffuU+h2ALR1OSKGYe4DRAAAFqM3DBQrNwwUKAAAAB3NzaC1yc2
+EAAAGBAIGwPhRGURchFiDzGOUWSu89xYVGuuDbl98EWy6oFBubm+0qjACngjZGogZaqlQ3
+GRinPkGu5HdFFsOGvwwFIqUq8ETy2u+ljnd34u2Z0+QHoGGgZbrWjI7EElLtcIyyMEfmiz
+7lkzi3oNcC6Z9PUPHxbE2a60FeYWvHjVwqH3nRSlXudP/Gm0znYUShAdjdMjpKSLrX+DV7
+Fc3qEio57XVaJGBKhoeOa2797wrBsTeOzgyUTBmUEFa8gtHQ4/fxLTSKaNds036z0cFL9J
++8Ff9FhnGskfRZC9K9El8x/hJZWKU2uDH55xDToa7WMr8vFi4aWgi4YhJiL2iKZLT0WH/0
+E/tQxUhkQAPSuOtdpsUbLCoXT5+L9KjyJpzVcslokqkOifxTfSrzpxBiCIUjSd6xBKWWl4
+Flhz2kNLFusnnp640KVM6ggSz/rElvjIgxKr6v3D7LSYVswxd9NaKZK1o/fSaVZX6Kt85A
+KDLrNKoljH37lPodgC0dTkihmHuA0QAAAAMBAAEAAAGABvjFo5Mio5jLnt6Wr2UPBvS2CD
+vEytb/P3XVXYkbWJ8ZRysG/veCUl7ica9A0hlqq9a8y+zmGwvPpRf6r/+cLM8lvr0j/CdV
+JPLA1CdVeuAWlPz5jw1e3cNoXUUmrGedXRYllO5kR1Omzbw6OS5bQoBpIzRhcoCLge7muG
+ZKziKMSZmRuFjRyzTyl40Ew4bjnvrUlVfMH/rjkY/kZVj7HRiJFVSYThP/zkYQKk6+k0cl
+6Er2Gtdo9/K3ISamxLLWONJCwxd+62Pv2/O55pAfzDW2eUGKHPLeVc4h1i3K9IWBO0mi0O
+/FeCaOVnuBTmXnDDyh0/Yuj+2Jlj7eHcl7D+Sxz1qaH81pFkmJwDEJz7nFORWjzCwmDAEo
+WEEN6rvVAUyc9iWbj3zq4kJjFJsg0u/LFcP/mUnLN8SZylA0u/sCZ9ty21EUlt0Lvuk9OZ
+17FNZK258plNt+i+pLOiqcjNF4h+ghpxQ0XkYtERgwSW4wF3PDGdtDBRRCqbzWAu0BAAAA
+wAfB2uJQt5pFuOzAQ+vbk/rH9OnWzpq608Tv9l21+oRcjrA/1C3n+4lcD9ASrQRaG4/dUt
+aeMy//iwZ6v3pINFSACmGoDi62AK3710UO3OYgw4pHjEpN7Sr+4W0Zl6EGpgpPczn3P6Hx
+siYR71zB6l6oZ4DGT6LukjBqQkjZCfMzDZLymQtm1K2L1xhOqoFehrAmhHHFlWH8d5kLfj
+v62h9/2eG8+mYbIfpkyZj2P7OV2ooojKGRMUqpamsSJS9g6wAAAMEAtp3KiYol+SNIt4s/
+zvHohPeLE00Br8mwjVVnqdYuTRytCPQEZCSgoZV+ucJNElW8oRU514FN1yzm9xnesFf+Im
+a5mnhmJ3Nu2uMNKE15/aIc7ZUejqTVLqWqI5sNuCRg/JeWWUIDX7YM/LZ7K6TPfWjA/W3u
+VDsHeUVwShPO6d+cH4S+QWrEoxVQx8mZf0MDt9ZP5wyD2Bj8loxMOkY2qlBEB0Up4SgqER
+eeclDYb3twGB9/awrPJbAFFmxU0RiBAAAAwQC1zZ8kOMzwQMdkDFc9w5D+DO92mvmQ67oC
+v5HDM1jMdfSkeNQdkvopl/d76jaS9PKKkEwnzfrM6GxBH0KfAxdHlIzP02elcE/Xlxnyi6
+NINQq0mlMDX5BP1vu7CmgienunK3tHi2OIs4ikoX2sUH8nImxvP61zqB1JT5E/DgIc5cKU
+q57e0JQddNqUHWD+SdRZikSfK9VTSuY8k7YenD0XejXxcTxRKbw3pXmg+eJUJx3U9m3/vy
+EWKDYhocbywFEAAAAyZWMyLXVzZXJAaXAtMTcyLTMxLTMtNC5hcC1zb3V0aC0xLmNvbXB1
+dGUuaW50ZXJuYWwB
+-----END OPENSSH PRIVATE KEY-----
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCBsD4URlEXIRYg8xjlFkrvPcWFRrrg25ffBFsuqBQbm5vtKowAp4I2RqIGWqpUNxkYpz5BruR3RRbDhr8MBSKlKvBE8trvpY53d+LtmdPkB6BhoGW61oyOxBJS7XCMsjBH5os+5ZM4t6DXAumfT1Dx8WxNmutBXmFrx41cKh950UpV7nT/xptM52FEoQHY3TI6Ski61/g1exXN6hIqOe11WiRgSoaHjmtu/e8KwbE3js4MlEwZlBBWvILR0OP38S00imjXbNN+s9HBS/SfvBX/RYZxrJH0WQvSvRJfMf4SWVilNrgx+ecQ06Gu1jK/LxYuGloIuGISYi9oimS09Fh/9BP7UMVIZEAD0rjrXabFGywqF0+fi/So8iac1XLJaJKpDon8U30q86cQYgiFI0nesQSllpeBZYc9pDSxbrJ56euNClTOoIEs/6xJb4yIMSq+r9w+y0mFbMMXfTWimStaP30mlWV+irfOQCgy6zSqJYx9+5T6HYAtHU5IoZh7gNE= ec2-user@ip-172-31-3-4.ap-south-1.compute.internal
+[ec2-user@ip-172-31-3-4 ~]$
+[ec2-user@ip-172-31-3-4 ~]$ ls
+id_rsa  id_rsa.pub
+[ec2-user@ip-172-31-3-4 ~]$ ssh -i id_rsa jenkins@3.110.223.155
+The authenticity of host '3.110.223.155 (3.110.223.155)' can't be established.
+ED25519 key fingerprint is SHA256:kF6Z8tdzZSGjUGXxP/LABtlKoGc3SO68kvUmmFQjTSE.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '3.110.223.155' (ED25519) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:42:25 2025
+[jenkins@ip-172-31-7-132 ~]$ exit
+logout
+Connection to 3.110.223.155 closed.
+[ec2-user@ip-172-31-3-4 ~]$ cat /var/lib/jenkins/secrets/initialAdminPassword
+cat: /var/lib/jenkins/secrets/initialAdminPassword: Permission denied
+[ec2-user@ip-172-31-3-4 ~]$ sudo su
+[root@ip-172-31-3-4 ec2-user]# cat /var/lib/jenkins/secrets/initialAdminPassword
+f2ec4528847a4824b06752a810c83472
+[root@ip-172-31-3-4 ec2-user]# client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 06:50:00 2025 from 157.49.10.159
+[ec2-user@ip-172-31-3-4 ~]$ sudo su
+[root@ip-172-31-3-4 ec2-user]# nano /etc/sudoers
+[root@ip-172-31-3-4 ec2-user]# which httpd
+/usr/sbin/httpd
+[root@ip-172-31-3-4 ec2-user]# which httpd
+/usr/bin/which: no httpd in (/root/.local/bin:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin)
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]#
+[root@ip-172-31-3-4 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-3-4 ~]$ ls
+id_rsa  id_rsa.pub
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+dGUuaW50ZXJuYWwB
+-----END OPENSSH PRIVATE KEY-----
+[ec2-user@ip-172-31-3-4 ~]$ su - jenkins
+Password:
+su: Authentication failure
+[ec2-user@ip-172-31-3-4 ~]$ sudo - jenkisn
+sudo: -: command not found
+[ec2-user@ip-172-31-3-4 ~]$ sudo - jenkins
+sudo: -: command not found
+[ec2-user@ip-172-31-3-4 ~]$ sudo -s jenkins
+Running from: /usr/share/java/jenkins.war
+webroot: /root/.jenkins/war
+2025-11-29 07:24:03.136+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2025-11-29 07:24:04.371+0000 [id=1]     WARNING o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath
+2025-11-29 07:24:04.455+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-12.0.25; built: 2025-08-11T23:52:37.219Z; git: a862b76d8372e24205765182d9ae1d1d333ce2ea; jvm 21.0.9+10-LTS
+2025-11-29 07:24:04.502+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@4066c471{STOPPING}[12.0.25,sto=0]
+2025-11-29 07:24:04.503+0000 [id=1]     INFO    winstone.Logger#logInternal: Jetty shutdown successfully
+java.io.IOException: Failed to start Jetty
+        at Jenkins Main ClassLoader//winstone.Launcher.<init>(Launcher.java:192)
+        at Jenkins Main ClassLoader//winstone.Launcher.main(Launcher.java:488)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at executable.Main.main(Main.java:335)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:313)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.lambda$doStart$0(Server.java:571)
+        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+        at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.doStart(Server.java:567)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:93)
+        at Jenkins Main ClassLoader//winstone.Launcher.<init>(Launcher.java:188)
+        ... 4 more
+Caused by: java.net.BindException: Address already in use
+        at java.base/sun.nio.ch.Net.bind0(Native Method)
+        at java.base/sun.nio.ch.Net.bind(Net.java:565)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+        ... 19 more
+2025-11-29 07:24:04.506+0000 [id=1]     SEVERE  winstone.Logger#logInternal: Container startup failed
+java.net.BindException: Address already in use
+        at java.base/sun.nio.ch.Net.bind0(Native Method)
+        at java.base/sun.nio.ch.Net.bind(Net.java:565)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+        at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+Caused: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:349)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:313)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.lambda$doStart$0(Server.java:571)
+        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+        at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+        at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.server.Server.doStart(Server.java:567)
+        at Jenkins Main ClassLoader//org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:93)
+        at Jenkins Main ClassLoader//winstone.Launcher.<init>(Launcher.java:188)
+Caused: java.io.IOException: Failed to start Jetty
+        at Jenkins Main ClassLoader//winstone.Launcher.<init>(Launcher.java:192)
+        at Jenkins Main ClassLoader//winstone.Launcher.main(Launcher.java:488)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+        at executable.Main.main(Main.java:335)
+[ec2-user@ip-172-31-3-4 ~]$
+[ec2-user@ip-172-31-3-4 ~]$ su - jenkins
+Password:
+su: Authentication failure
+[ec2-user@ip-172-31-3-4 ~]$ sudo su
+[root@ip-172-31-3-4 ec2-user]# passwd jenkins
+Changing password for user jenkins.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-3-4 ec2-user]# usermod -s /bin/bash jenkins
+[root@ip-172-31-3-4 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-3-4 ~]$ su - jenkins
+Password:
+Last failed login: Sat Nov 29 07:24:15 UTC 2025 on pts/4
+There were 2 failed login attempts since the last successful login.
+[jenkins@ip-172-31-3-4 ~]$ pwd
+/var/lib/jenkins
+[jenkins@ip-172-31-3-4 ~]$ cd
+[jenkins@ip-172-31-3-4 ~]$
+[jenkins@ip-172-31-3-4 ~]$
+[jenkins@ip-172-31-3-4 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 07:08:55 2025 from 157.49.10.159
+[ec2-user@ip-172-31-3-4 ~]$ su - jenkins
+Password:
+Last login: Sat Nov 29 07:25:37 UTC 2025 on pts/4
+[jenkins@ip-172-31-3-4 ~]$ pwd
+/var/lib/jenkins
+[jenkins@ip-172-31-3-4 ~]$ ls -a
+.                                                   jenkins.security.QueueItemAuthenticatorConfiguration.xml
+..                                                  jenkins.security.UpdateSiteWarningsConfiguration.xml
+.cache                                              jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml
+.groovy                                             jenkins.telemetry.Correlator.xml
+.java                                               jobs
+.lastStarted                                        logs
+.owner                                              nodeMonitors.xml
+config.xml                                          nodes
+credentials.xml                                     org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+fingerprints                                        plugins
+hudson.model.UpdateCenter.xml                       queue.xml
+hudson.plugins.emailext.ExtendedEmailPublisher.xml  scriptApproval.xml
+hudson.plugins.git.GitTool.xml                      secret.key
+identity.key.enc                                    secret.key.not-so-secret
+io.jenkins.plugins.prism.PrismConfiguration.xml     secrets
+jenkins.install.InstallUtil.lastExecVersion         updates
+jenkins.install.UpgradeWizard.state                 userContent
+jenkins.model.JenkinsLocationConfiguration.xml      users
+jenkins.plugins.git.GitHooksConfiguration.xml       workspace
+[jenkins@ip-172-31-3-4 ~]$ pwd
+/var/lib/jenkins
+[jenkins@ip-172-31-3-4 ~]$ mkdir .ssh
+[jenkins@ip-172-31-3-4 ~]$ touch /var/lib/jenkins/.ssh/known_hosts
+[jenkins@ip-172-31-3-4 ~]$ chmod 600 /var/lib/jenkins/.ssh/known_hosts
+[jenkins@ip-172-31-3-4 ~]$ cat /var/lib/jenkins/.ssh/known_hosts
+[jenkins@ip-172-31-3-4 ~]$ ssh-keyscan -H 3.110.223.155 >> /var/lib/jenkins/.ssh/known_hosts
+# 3.110.223.155:22 SSH-2.0-OpenSSH_8.7
+# 3.110.223.155:22 SSH-2.0-OpenSSH_8.7
+# 3.110.223.155:22 SSH-2.0-OpenSSH_8.7
+# 3.110.223.155:22 SSH-2.0-OpenSSH_8.7
+# 3.110.223.155:22 SSH-2.0-OpenSSH_8.7
+[jenkins@ip-172-31-3-4 ~]$ cat /var/lib/jenkins/.ssh/known_hosts
+|1|792J5LLL8dgUmR+c5yhubi618Rw=|4I5Vf8E/Hwf4t5BpCE7cCSlF7t4= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLqUljapUbHlF0PNE1Wj0OxL1TQ1lolH0TWB3r6aMm0ydc1LV13czTrLIq9QYTIHjdlnQCsI0fLZvx9LKKvW1Lw=
+|1|WbNHA4erfSYinPi6XdQH4HikdKc=|7rM+uLNysgOTozufmr+xcL0M4j4= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID2ViMmSXjKoLvE6noP1GwI/KmcPjfkESS66cduFnCzS
+[jenkins@ip-172-31-3-4 ~]$ which httpd
+/usr/bin/which: no httpd in (/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin)
+[jenkins@ip-172-31-3-4 ~]$ which httpd
+/usr/sbin/httpd
+[jenkins@ip-172-31-3-4 ~]$ ls
+config.xml                                          jenkins.plugins.git.GitHooksConfiguration.xml                            queue.xml
+credentials.xml                                     jenkins.security.QueueItemAuthenticatorConfiguration.xml                 scriptApproval.xml
+fingerprints                                        jenkins.security.UpdateSiteWarningsConfiguration.xml                     secret.key
+hudson.model.UpdateCenter.xml                       jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml              secret.key.not-so-secret
+hudson.plugins.emailext.ExtendedEmailPublisher.xml  jenkins.telemetry.Correlator.xml                                         secrets
+hudson.plugins.git.GitTool.xml                      jobs                                                                     updates
+identity.key.enc                                    logs                                                                     userContent
+io.jenkins.plugins.prism.PrismConfiguration.xml     nodeMonitors.xml                                                         users
+jenkins.install.InstallUtil.lastExecVersion         nodes                                                                    workspace
+jenkins.install.UpgradeWizard.state                 org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+jenkins.model.JenkinsLocationConfiguration.xml      plugins
+[jenkins@ip-172-31-3-4 ~]$ su ec2-user
+Password:
+su: Authentication failure
+[jenkins@ip-172-31-3-4 ~]$ exit
+logout
+[ec2-user@ip-172-31-3-4 ~]$ ls
+id_rsa  id_rsa.pub
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+dGUuaW50ZXJuYWwB
+-----END OPENSSH PRIVATE KEY-----
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCBsD4URlEXIRYg8xjlFkrvPcWFRrrg25ffBFsuqBQbm5vtKowAp4I2RqIGWqpUNxkYpz5BruR3RRbDhr8MBSKlKvBE8trvpY53d+LtmdPkB6BhoGW61oyOxBJS7XCMsjBH5os+5ZM4t6DXAumfT1Dx8WxNmutBXmFrx41cKh950UpV7nT/xptM52FEoQHY3TI6Ski61/g1exXN6hIqOe11WiRgSoaHjmtu/e8KwbE3js4MlEwZlBBWvILR0OP38S00imjXbNN+s9HBS/SfvBX/RYZxrJH0WQvSvRJfMf4SWVilNrgx+ecQ06Gu1jK/LxYuGloIuGISYi9oimS09Fh/9BP7UMVIZEAD0rjrXabFGywqF0+fi/So8iac1XLJaJKpDon8U30q86cQYgiFI0nesQSllpeBZYc9pDSxbrJ56euNClTOoIEs/6xJb4yIMSq+r9w+y0mFbMMXfTWimStaP30mlWV+irfOQCgy6zSqJYx9+5T6HYAtHU5IoZh7gNE= ec2-user@ip-172-31-3-4.ap-south-1.compute.internal
+[ec2-user@ip-172-31-3-4 ~]$
+[ec2-user@ip-172-31-3-4 ~]$ ssh-keyscan -H 3.110.28.231 >> /var/lib/jenkins/.ssh/known_hosts
+-bash: /var/lib/jenkins/.ssh/known_hosts: Permission denied
+[ec2-user@ip-172-31-3-4 ~]$ sudo su
+[root@ip-172-31-3-4 ec2-user]# ssh-keyscan -H 3.110.28.231 >> /var/lib/jenkins/.ssh/known_hosts
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+[root@ip-172-31-3-4 ec2-user]# client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last failed login: Sat Nov 29 08:04:29 UTC 2025 on pts/5
+There was 1 failed login attempt since the last successful login.
+Last login: Sat Nov 29 07:28:32 2025 from 103.146.111.83
+[ec2-user@ip-172-31-3-4 ~]$ ls
+id_rsa  id_rsa.pub
+[ec2-user@ip-172-31-3-4 ~]$ client_loop: send disconnect: Connection reset
+
+C:\Users\Gaurav.26\Downloads\repo\Linux-mac>ssh -i id_rsa ec2-user@3.110.176.121
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.9.20251117:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Nov 29 08:28:27 2025 from 103.146.111.68
+[ec2-user@ip-172-31-3-4 ~]$ ls
+id_rsa  id_rsa.pub
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCBsD4URlEXIRYg8xjlFkrvPcWFRrrg25ffBFsuqBQbm5vtKowAp4I2RqIGWqpUNxkYpz5BruR3RRbDhr8MBSKlKvBE8trvpY53d+LtmdPkB6BhoGW61oyOxBJS7XCMsjBH5os+5ZM4t6DXAumfT1Dx8WxNmutBXmFrx41cKh950UpV7nT/xptM52FEoQHY3TI6Ski61/g1exXN6hIqOe11WiRgSoaHjmtu/e8KwbE3js4MlEwZlBBWvILR0OP38S00imjXbNN+s9HBS/SfvBX/RYZxrJH0WQvSvRJfMf4SWVilNrgx+ecQ06Gu1jK/LxYuGloIuGISYi9oimS09Fh/9BP7UMVIZEAD0rjrXabFGywqF0+fi/So8iac1XLJaJKpDon8U30q86cQYgiFI0nesQSllpeBZYc9pDSxbrJ56euNClTOoIEs/6xJb4yIMSq+r9w+y0mFbMMXfTWimStaP30mlWV+irfOQCgy6zSqJYx9+5T6HYAtHU5IoZh7gNE= ec2-user@ip-172-31-3-4.ap-south-1.compute.internal
+[ec2-user@ip-172-31-3-4 ~]$ cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+dGUuaW50ZXJuYWwB
+-----END OPENSSH PRIVATE KEY-----
+[ec2-user@ip-172-31-3-4 ~]$ su - jenkins
+Password:
+Last login: Sat Nov 29 07:28:57 UTC 2025 on pts/5
+[jenkins@ip-172-31-3-4 ~]$ ssh-gen key -t rsa
+-bash: ssh-gen: command not found
+[jenkins@ip-172-31-3-4 ~]$ ssh-genkey -t rsa
+-bash: ssh-genkey: command not found
+[jenkins@ip-172-31-3-4 ~]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/var/lib/jenkins/.ssh/id_rsa): id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa
+Your public key has been saved in id_rsa.pub
+The key fingerprint is:
+SHA256:3Ixiu6yUK1g3s4+CIxHwX2yyz2Uo/wcimntxS0DXDwA jenkins@ip-172-31-3-4.ap-south-1.compute.internal
+The key's randomart image is:
++---[RSA 3072]----+
+|    E..o         |
+|.   . . o        |
+|.. . o   o       |
+|. . o +. +.      |
+| . . *o.S o      |
+|. . Xo=o+        |
+| = +o&.= .       |
+|= =.o+=.  .      |
+|...=+o+...       |
++----[SHA256]-----+
+[jenkins@ip-172-31-3-4 ~]$ ls
+config.xml                                                   jenkins.telemetry.Correlator.xml
+credentials.xml                                              jobs
+fingerprints                                                 logs
+hudson.model.UpdateCenter.xml                                nodeMonitors.xml
+hudson.plugins.emailext.ExtendedEmailPublisher.xml           nodes
+hudson.plugins.git.GitTool.xml                               org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+id_rsa                                                       plugins
+id_rsa.pub                                                   queue.xml
+identity.key.enc                                             scriptApproval.xml
+io.jenkins.plugins.prism.PrismConfiguration.xml              secret.key
+jenkins.install.InstallUtil.lastExecVersion                  secret.key.not-so-secret
+jenkins.install.UpgradeWizard.state                          secrets
+jenkins.model.JenkinsLocationConfiguration.xml               updates
+jenkins.plugins.git.GitHooksConfiguration.xml                userContent
+jenkins.security.QueueItemAuthenticatorConfiguration.xml     users
+jenkins.security.UpdateSiteWarningsConfiguration.xml         workspace
+jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml
+[jenkins@ip-172-31-3-4 ~]$ ls
+config.xml                                                   jenkins.telemetry.Correlator.xml
+credentials.xml                                              jobs
+fingerprints                                                 logs
+hudson.model.UpdateCenter.xml                                nodeMonitors.xml
+hudson.plugins.emailext.ExtendedEmailPublisher.xml           nodes
+hudson.plugins.git.GitTool.xml                               org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+id_rsa                                                       plugins
+id_rsa.pub                                                   queue.xml
+identity.key.enc                                             scriptApproval.xml
+io.jenkins.plugins.prism.PrismConfiguration.xml              secret.key
+jenkins.install.InstallUtil.lastExecVersion                  secret.key.not-so-secret
+jenkins.install.UpgradeWizard.state                          secrets
+jenkins.model.JenkinsLocationConfiguration.xml               updates
+jenkins.plugins.git.GitHooksConfiguration.xml                userContent
+jenkins.security.QueueItemAuthenticatorConfiguration.xml     users
+jenkins.security.UpdateSiteWarningsConfiguration.xml         workspace
+jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml
+[jenkins@ip-172-31-3-4 ~]$ ls
+config.xml                                                   jenkins.telemetry.Correlator.xml
+credentials.xml                                              jobs
+fingerprints                                                 logs
+hudson.model.UpdateCenter.xml                                nodeMonitors.xml
+hudson.plugins.emailext.ExtendedEmailPublisher.xml           nodes
+hudson.plugins.git.GitTool.xml                               org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+id_rsa                                                       plugins
+id_rsa.pub                                                   queue.xml
+identity.key.enc                                             scriptApproval.xml
+io.jenkins.plugins.prism.PrismConfiguration.xml              secret.key
+jenkins.install.InstallUtil.lastExecVersion                  secret.key.not-so-secret
+jenkins.install.UpgradeWizard.state                          secrets
+jenkins.model.JenkinsLocationConfiguration.xml               updates
+jenkins.plugins.git.GitHooksConfiguration.xml                userContent
+jenkins.security.QueueItemAuthenticatorConfiguration.xml     users
+jenkins.security.UpdateSiteWarningsConfiguration.xml         workspace
+jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml
+[jenkins@ip-172-31-3-4 ~]$ ssh-keyscan -H 3.110.28.231 >> /var/lib/jenkins/.ssh/known_hosts
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+[jenkins@ip-172-31-3-4 ~]$ ls
+config.xml                                                   jenkins.telemetry.Correlator.xml
+credentials.xml                                              jobs
+fingerprints                                                 logs
+hudson.model.UpdateCenter.xml                                nodeMonitors.xml
+hudson.plugins.emailext.ExtendedEmailPublisher.xml           nodes
+hudson.plugins.git.GitTool.xml                               org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+id_rsa                                                       plugins
+id_rsa.pub                                                   queue.xml
+identity.key.enc                                             scriptApproval.xml
+io.jenkins.plugins.prism.PrismConfiguration.xml              secret.key
+jenkins.install.InstallUtil.lastExecVersion                  secret.key.not-so-secret
+jenkins.install.UpgradeWizard.state                          secrets
+jenkins.model.JenkinsLocationConfiguration.xml               updates
+jenkins.plugins.git.GitHooksConfiguration.xml                userContent
+jenkins.security.QueueItemAuthenticatorConfiguration.xml     users
+jenkins.security.UpdateSiteWarningsConfiguration.xml         workspace
+jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml
+[jenkins@ip-172-31-3-4 ~]$ cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+ZS5pbnRlcm5hbAEC
+-----END OPENSSH PRIVATE KEY-----
+[jenkins@ip-172-31-3-4 ~]$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDARRiCuopmFvBgZwmsAUp1PKLD6elVYaupJwR0LrWZjvGAOSTDAugYQmV4g9pfYkJGuvPq5YIDxI5WQ4sCrzm1RwDVwtj6YrjXQli2Af8R1pdHYAwTsKtkMBPhL45FAV6hsemSxPJ4NiflBFjUKiPu4bq4sT6w9ssvXBLXB8ukQ5mgF8ZauBZBlzr5WN/ZqK4EseDdliPA6L21uwRu80/CiiEdHp253bEgStUGl//+KMut1ecUSmgOczZw51j84iD2wfe20y4aXVRvH7dlR6mTX2uaJwNigT9PpbZ77PZV36Bc2zWkxai3UOdpQ0u/izWZGjd8WBXPCrc1nsBePRx+GIoJ2DZ8I8f3Ta0EKTGmtUBPsnr32JHTigEXLGCl9KtPUI7SDL+r+VJdEMHk9ue8R15eaYpd0/P1RfEojXOLLPQyJhdBSXnoe836SBe5gNUfVniaNrZjnBVOZOIY65dlmFkziSk2F6aYLaqo6N1Q+rWM8diaDL4qe8r00nR+MFM= jenkins@ip-172-31-3-4.ap-south-1.compute.internal
+[jenkins@ip-172-31-3-4 ~]$ ssh-keyscan -H 3.110.28.231 >> /var/lib/jenkins/.ssh/known_hosts
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+# 3.110.28.231:22 SSH-2.0-OpenSSH_8.7
+[jenkins@ip-172-31-3-4 ~]$ exit
+logout
+[ec2-user@ip-172-31-3-4 ~]$ sudo su
+[root@ip-172-31-3-4 ec2-user]# sudo usermod -aG wheel jenkins
+[root@ip-172-31-3-4 ec2-user]# su - jenkins
+Last login: Sat Nov 29 08:33:15 UTC 2025 on pts/8
+[jenkins@ip-172-31-3-4 ~]$ ls
+config.xml                                                   jenkins.telemetry.Correlator.xml
+credentials.xml                                              jobs
+fingerprints                                                 logs
+hudson.model.UpdateCenter.xml                                nodeMonitors.xml
+hudson.plugins.emailext.ExtendedEmailPublisher.xml           nodes
+hudson.plugins.git.GitTool.xml                               org.jenkinsci.plugins.gitclient.GitHostKeyVerificationConfiguration.xml
+id_rsa                                                       plugins
+id_rsa.pub                                                   queue.xml
+identity.key.enc                                             scriptApproval.xml
+io.jenkins.plugins.prism.PrismConfiguration.xml              secret.key
+jenkins.install.InstallUtil.lastExecVersion                  secret.key.not-so-secret
+jenkins.install.UpgradeWizard.state                          secrets
+jenkins.model.JenkinsLocationConfiguration.xml               updates
+jenkins.plugins.git.GitHooksConfiguration.xml                userContent
+jenkins.security.QueueItemAuthenticatorConfiguration.xml     users
+jenkins.security.UpdateSiteWarningsConfiguration.xml         workspace
+jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml
+[jenkins@ip-172-31-3-4 ~]$ cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+ZS5pbnRlcm5hbAEC
+-----END OPENSSH PRIVATE KEY-----
+[jenkins@ip-172-31-3-4 ~]$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDARRiCuopmFvBgZwmsAUp1PKLD6elVYaupJwR0LrWZjvGAOSTDAugYQmV4g9pfYkJGuvPq5YIDxI5WQ4sCrzm1RwDVwtj6YrjXQli2Af8R1pdHYAwTsKtkMBPhL45FAV6hsemSxPJ4NiflBFjUKiPu4bq4sT6w9ssvXBLXB8ukQ5mgF8ZauBZBlzr5WN/ZqK4EseDdliPA6L21uwRu80/CiiEdHp253bEgStUGl//+KMut1ecUSmgOczZw51j84iD2wfe20y4aXVRvH7dlR6mTX2uaJwNigT9PpbZ77PZV36Bc2zWkxai3UOdpQ0u/izWZGjd8WBXPCrc1nsBePRx+GIoJ2DZ8I8f3Ta0EKTGmtUBPsnr32JHTigEXLGCl9KtPUI7SDL+r+VJdEMHk9ue8R15eaYpd0/P1RfEojXOLLPQyJhdBSXnoe836SBe5gNUfVniaNrZjnBVOZOIY65dlmFkziSk2F6aYLaqo6N1Q+rWM8diaDL4qe8r00nR+MFM= jenkins@ip-172-31-3-4.ap-south-1.compute.internal
+[jenkins@ip-172-31-3-4 ~]$ which httpd
+/usr/sbin/httpd
+[jenkins@ip-172-31-3-4 ~]$
