@@ -1,0 +1,561 @@
+Microsoft Windows [Version 10.0.22631.6345]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Gaurav.26>cd Downloads
+
+C:\Users\Gaurav.26\Downloads>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gaurav.26\Downloads>ssh -i jenkinsserver.pem ec2-user@3.110.218.233
+The authenticity of host '3.110.218.233 (3.110.218.233)' can't be established.
+ED25519 key fingerprint is SHA256:no3x3coSwHOr5Z3S2IORRJBtusYBBvTEqoHSK+dzzGI.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '3.110.218.233' (ED25519) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-13-161 ~]$ cat /etc/jenkins
+cat: /etc/jenkins: No such file or directory
+[ec2-user@ip-172-31-13-161 ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/usr/sbin/nologin
+systemd-oom:x:999:999:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/usr/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:997:997:daemon account for libstoragemgmt:/:/usr/sbin/nologin
+systemd-coredump:x:996:996:systemd Core Dumper:/:/usr/sbin/nologin
+systemd-timesync:x:995:995:systemd Time Synchronization:/:/usr/sbin/nologin
+chrony:x:994:994:chrony system user:/var/lib/chrony:/sbin/nologin
+ec2-instance-connect:x:993:993::/home/ec2-instance-connect:/sbin/nologin
+stapunpriv:x:159:159:systemtap unprivileged user:/var/lib/stapunpriv:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+[ec2-user@ip-172-31-13-161 ~]$ sudo useradd jenkins
+[ec2-user@ip-172-31-13-161 ~]$ sudo passwd jenkins
+Changing password for user jenkins.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[ec2-user@ip-172-31-13-161 ~]$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-network:x:192:192:systemd Network Management:/:/usr/sbin/nologin
+systemd-oom:x:999:999:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/usr/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+libstoragemgmt:x:997:997:daemon account for libstoragemgmt:/:/usr/sbin/nologin
+systemd-coredump:x:996:996:systemd Core Dumper:/:/usr/sbin/nologin
+systemd-timesync:x:995:995:systemd Time Synchronization:/:/usr/sbin/nologin
+chrony:x:994:994:chrony system user:/var/lib/chrony:/sbin/nologin
+ec2-instance-connect:x:993:993::/home/ec2-instance-connect:/sbin/nologin
+stapunpriv:x:159:159:systemtap unprivileged user:/var/lib/stapunpriv:/sbin/nologin
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+jenkins:x:1001:1001::/home/jenkins:/bin/bash
+[ec2-user@ip-172-31-13-161 ~]$ su - jenkins
+Password:
+[jenkins@ip-172-31-13-161 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc
+[jenkins@ip-172-31-13-161 ~]$ ssh-copy-id jenkins@172.31.13.161
+/usr/bin/ssh-copy-id: ERROR: No identities found
+[jenkins@ip-172-31-13-161 ~]$ pwd
+/home/jenkins
+[jenkins@ip-172-31-13-161 ~]$ ls
+[jenkins@ip-172-31-13-161 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc
+[jenkins@ip-172-31-13-161 ~]$ pwd
+/home/jenkins
+[jenkins@ip-172-31-13-161 ~]$ pwd
+/home/jenkins
+[jenkins@ip-172-31-13-161 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc
+[jenkins@ip-172-31-13-161 ~]$ mkdir .ssh
+[jenkins@ip-172-31-13-161 ~]$ ls
+[jenkins@ip-172-31-13-161 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[jenkins@ip-172-31-13-161 ~]$ ls -l
+total 0
+[jenkins@ip-172-31-13-161 ~]$ cd .ssh/
+[jenkins@ip-172-31-13-161 .ssh]$ ls
+[jenkins@ip-172-31-13-161 .ssh]$ ls -a
+.  ..
+[jenkins@ip-172-31-13-161 .ssh]$ touch authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ ls -l
+total 0
+-rw-r--r--. 1 jenkins jenkins 0 Dec 12 08:10 authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ chmod 777 authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ cd ..
+[jenkins@ip-172-31-13-161 ~]$ chmod 777 .ssh
+[jenkins@ip-172-31-13-161 ~]$ ls
+[jenkins@ip-172-31-13-161 ~]$ ls -l
+total 0
+[jenkins@ip-172-31-13-161 ~]$ ls -la
+total 12
+drwx------. 3 jenkins jenkins  74 Dec 12 08:09 .
+drwxr-xr-x. 4 root    root     37 Dec 12 07:17 ..
+-rw-r--r--. 1 jenkins jenkins  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 jenkins jenkins 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 jenkins jenkins 492 Jan 28  2023 .bashrc
+drwxrwxrwx. 2 jenkins jenkins  29 Dec 12 08:10 .ssh
+[jenkins@ip-172-31-13-161 ~]$
+[jenkins@ip-172-31-13-161 ~]$
+[jenkins@ip-172-31-13-161 ~]$
+[jenkins@ip-172-31-13-161 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[jenkins@ip-172-31-13-161 ~]$ cd .ssh/
+[jenkins@ip-172-31-13-161 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ chmod 600 authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ ssh-copy-id -i /var/lib/jenkins/.ssh/id_rsa.pub jenkins@172.31.13.161
+
+/usr/bin/ssh-copy-id: ERROR: failed to open ID file '/var/lib/jenkins/.ssh/id_rsa.pub': No such file or directory
+[jenkins@ip-172-31-13-161 .ssh]$ pwd
+/home/jenkins/.ssh
+[jenkins@ip-172-31-13-161 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ nano authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCnLCwn4d6foaRsKXGi6GrXfh9bnvDxNechYoKK3RtzYXZDDQ6Ps61vElmROOGadVOmid99UZmSfvhyHiLQF2U4ERBjnlGB7Ve7GPxZ5QaZe5El6+/iHphWev47YJXYa7oX7Z8gpjFUqOHMIGJllw77XsbFT/p+7k47DiusX3HtCgyGdUiTX0VIcIvjPuPSxCYhsurtKhCZECH/X9kkJgRBfjZiw4OQaGibeWwPtkcNNJu7eI/7Zj0mBYs3exFFQWeUxpfQSJv5V3TJ6f7vEE3qm9CMiuPWbaPrcrB82ayNE1wPa6l5ipHV+qMkFjjl6H9EEbx7DeuH5noDyC3x+OH1dyLt5Tt5ZmPnU8FLPNdF3HAscf9wQlP/FvYvqYAanmQScyMMEy+pzLwAtxpYETN2D5ho47ru6sWJlUwYF1uODowHi9X+cA5ppJDkLPS953vatn2G7vMynVrDOlG77f3kB055UMgzGXavwZ0eaNm93jmeKHPiTHfs3Ane51UYSPU= jenkins@ip-172-31-14-211.ap-south-1.compute.internal
+[jenkins@ip-172-31-13-161 .ssh]$ ls
+authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ ls -l
+total 4
+-rw-------. 1 jenkins jenkins 606 Dec 12 08:17 authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ chmod 777 authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$ l
+-bash: l: command not found
+[jenkins@ip-172-31-13-161 .ssh]$ ls -l
+total 4
+-rwxrwxrwx. 1 jenkins jenkins 606 Dec 12 08:17 authorized_keys
+[jenkins@ip-172-31-13-161 .ssh]$
+[jenkins@ip-172-31-13-161 .ssh]$ cd ..
+[jenkins@ip-172-31-13-161 ~]$
+sudo ls -ld /home/jenkins
+sudo ls -ld /home/jenkins/.ssh
+sudo ls -l /home/jenkins/.ssh/authorized_keys
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+For security reasons, the password you type will not be visible.
+
+[sudo] password for jenkins:
+jenkins is not in the sudoers file.
+[sudo] password for jenkins:
+ddd
+Sorry, try again.
+[sudo] password for jenkins:
+Sorry, try again.
+[sudo] password for jenkins:
+jenkins is not in the sudoers file.
+[sudo] password for jenkins:
+jenkins is not in the sudoers file.
+[jenkins@ip-172-31-13-161 ~]$ ls -ld /home/jenkins
+drwx------. 3 jenkins jenkins 74 Dec 12 08:09 /home/jenkins
+[jenkins@ip-172-31-13-161 ~]$ ls -ld /home/jenkins/.ssh
+drwxrwxrwx. 2 jenkins jenkins 29 Dec 12 08:10 /home/jenkins/.ssh
+[jenkins@ip-172-31-13-161 ~]$ ls -ld /home/jenkins/.ssh/authorized_keys
+-rwxrwxrwx. 1 jenkins jenkins 606 Dec 12 08:17 /home/jenkins/.ssh/authorized_keys
+[jenkins@ip-172-31-13-161 ~]$ chmod 700 /home/jenkins/.ssh
+[jenkins@ip-172-31-13-161 ~]$ chmod 600 /home/jenkins/.ssh/authorized_keys
+[jenkins@ip-172-31-13-161 ~]$ chown -R jenkins:jenkins /home/jenkins/.ssh
+[jenkins@ip-172-31-13-161 ~]$ ls -ld /home/jenkins/.ssh
+drwx------. 2 jenkins jenkins 29 Dec 12 08:10 /home/jenkins/.ssh
+[jenkins@ip-172-31-13-161 ~]$ ls -l /home/jenkins/.ssh/authorized_keys
+-rw-------. 1 jenkins jenkins 606 Dec 12 08:17 /home/jenkins/.ssh/authorized_keys
+[jenkins@ip-172-31-13-161 ~]$ exit
+logout
+[ec2-user@ip-172-31-13-161 ~]$ sudo su
+[root@ip-172-31-13-161 ec2-user]# usermod -rG wheel jenkins
+usermod: invalid option -- 'r'
+Usage: usermod [options] LOGIN
+
+Options:
+  -b, --badnames                allow bad names
+  -c, --comment COMMENT         new value of the GECOS field
+  -d, --home HOME_DIR           new home directory for the user account
+  -e, --expiredate EXPIRE_DATE  set account expiration date to EXPIRE_DATE
+  -f, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -g, --gid GROUP               force use GROUP as new primary group
+  -G, --groups GROUPS           new list of supplementary GROUPS
+  -a, --append                  append the user to the supplemental GROUPS
+                                mentioned by the -G option without removing
+                                the user from other groups
+  -h, --help                    display this help message and exit
+  -l, --login NEW_LOGIN         new value of the login name
+  -L, --lock                    lock the user account
+  -m, --move-home               move contents of the home directory to the
+                                new location (use only with -d)
+  -o, --non-unique              allow using duplicate (non-unique) UID
+  -p, --password PASSWORD       use encrypted password for the new password
+  -R, --root CHROOT_DIR         directory to chroot into
+  -P, --prefix PREFIX_DIR       prefix directory where are located the /etc/* files
+  -s, --shell SHELL             new login shell for the user account
+  -u, --uid UID                 new UID for the user account
+  -U, --unlock                  unlock the user account
+  -v, --add-subuids FIRST-LAST  add range of subordinate uids
+  -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+  -w, --add-subgids FIRST-LAST  add range of subordinate gids
+  -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+  -Z, --selinux-user SEUSER     new SELinux user mapping for the user account
+
+[root@ip-172-31-13-161 ec2-user]#
+[root@ip-172-31-13-161 ec2-user]#
+[root@ip-172-31-13-161 ec2-user]# nano /etc/sudoers
+[root@ip-172-31-13-161 ec2-user]# usermod -aG wheel jenkins
+[root@ip-172-31-13-161 ec2-user]# nano /etc/sudoers
+[root@ip-172-31-13-161 ec2-user]# pwd
+/home/ec2-user
+[root@ip-172-31-13-161 ec2-user]# cd /etc
+[root@ip-172-31-13-161 etc]# nano sudoers
+[root@ip-172-31-13-161 etc]# ls -l
+total 1132
+-rw-r--r--.  1 root root     4673 Sep 12 18:12 DIR_COLORS
+-rw-r--r--.  1 root root     4755 Sep 12 18:12 DIR_COLORS.lightbgcolor
+-rw-r--r--.  1 root root       94 Jan 30  2023 GREP_COLORS
+drwxr-xr-x.  3 root root       26 Dec  3 16:41 NetworkManager
+drwxr-xr-x.  6 root root       70 Dec  3 16:41 X11
+drwxr-xr-x.  4 root root       35 Dec  3 16:41 acpi
+-rw-r--r--.  1 root root       16 Dec  3 16:43 adjtime
+-rw-r--r--.  1 root root     1529 Jun 23  2020 aliases
+drwxr-xr-x.  2 root root      213 Dec  3 16:42 alternatives
+drwxr-xr-x.  3 root root       17 Dec  3 16:42 amazon
+lrwxrwxrwx.  1 root root       25 Dec  1 22:02 amazon-linux-release -> ../usr/lib/system-release
+lrwxrwxrwx.  1 root root       29 Dec  1 22:02 amazon-linux-release-cpe -> ../usr/lib/system-release-cpe
+-rw-r--r--.  1 root root        1 Jan 30  2023 at.deny
+drwxr-x---.  4 root root      100 Dec 12 07:04 audit
+drwxr-xr-x.  2 root root       30 Dec  3 16:41 bash_completion.d
+-rw-r--r--.  1 root root     3019 Jun 23  2020 bashrc
+-rw-r--r--.  1 root root      535 Feb  2  2023 bindresvport.blacklist
+drwxr-xr-x.  2 root root        6 Dec  2 16:28 binfmt.d
+drwxr-xr-x.  2 root root        6 Jan 29  2023 chkconfig.d
+-rw-r--r--.  1 root root     1425 Jan 13  2025 chrony.conf
+drwxr-xr-x.  2 root root       20 Dec  3 16:41 chrony.d
+-rw-r-----.  1 root chrony    540 Aug 29  2022 chrony.keys
+drwxr-xr-x.  2 root root       26 Dec  3 16:41 cifs-utils
+drwxr-xr-x.  4 root root       59 Dec  3 16:41 cloud
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.daily
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.hourly
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.monthly
+drwxr-xr-x.  2 root root        6 Jan 30  2023 cron.weekly
+-rw-r--r--.  1 root root      451 Jan 30  2023 crontab
+drwxr-xr-x.  6 root root       81 Dec  3 16:40 crypto-policies
+-rw-r--r--.  1 root root     1657 Jun 23  2020 csh.cshrc
+-rw-r--r--.  1 root root     1093 Jun 23  2020 csh.login
+drwxr-xr-x.  4 root root       78 Dec  3 16:40 dbus-1
+drwxr-xr-x.  2 root root       33 Dec  3 16:43 default
+drwxr-xr-x.  2 root root        6 Jan 31  2023 depmod.d
+drwxr-xr-x.  3 root root       56 Dec  3 16:43 dhcp
+drwxr-xr-x.  8 root root      128 Dec  3 16:40 dnf
+-rw-r--r--.  1 root root      117 Oct 25  2024 dracut.conf
+drwxr-xr-x.  2 root root       22 Dec  3 16:43 dracut.conf.d
+-rw-r--r--.  1 root root        0 Jan 30  2023 environment
+-rw-r--r--.  1 root root     1362 Jun 23  2020 ethertypes
+-rw-r--r--.  1 root root        0 Jun 23  2020 exports
+drwxr-xr-x.  2 root root        6 Feb  1  2023 exports.d
+-rw-r--r--.  1 root root       66 Jun 23  2020 filesystems
+-rw-r--r--.  1 root root      217 Dec  3 16:43 fstab
+drwxr-xr-x.  2 root root        6 Oct  4  2024 gcrypt
+drwxr-xr-x.  2 root root        6 Dec  3 16:40 gnupg
+drwxr-xr-x.  4 root root       40 Dec  3 16:40 groff
+-rw-r--r--.  1 root root      765 Dec 12 08:36 group
+-rw-r--r--.  1 root root      757 Dec 12 07:17 group-
+drwx------.  2 root root      253 Dec  3 16:41 grub.d
+lrwxrwxrwx.  1 root root       22 Oct 13 08:21 grub2-efi.cfg -> ../boot/grub2/grub.cfg
+lrwxrwxrwx.  1 root root       22 Oct 13 08:21 grub2.cfg -> ../boot/grub2/grub.cfg
+----------.  1 root root      637 Dec 12 08:36 gshadow
+----------.  1 root root      629 Dec 12 07:17 gshadow-
+drwxr-xr-x.  3 root root       20 Dec  3 16:40 gss
+drwxr-xr-x.  2 root root       87 Dec  3 16:42 gssproxy
+-rw-r--r--.  1 root root     1047 Oct 23 23:17 hibinit-config.cfg
+-rw-r--r--.  1 root root        9 Jun 23  2020 host.conf
+-rw-r--r--.  1 root root       45 Dec 12 07:04 hostname
+-rw-r--r--.  1 root root      126 Dec  3 16:43 hosts
+-rw-r--r--.  1 root root     5799 Feb  1  2023 idmapd.conf
+-rw-r--r--.  1 root root      270 Dec  3 16:43 image-id
+lrwxrwxrwx.  1 root root       11 Jan 29  2023 init.d -> rc.d/init.d
+-rw-r--r--.  1 root root      490 Dec  2 16:28 inittab
+-rw-r--r--.  1 root root      943 Jun 23  2020 inputrc
+lrwxrwxrwx.  1 root root       16 Dec  1 22:02 issue -> ../usr/lib/issue
+lrwxrwxrwx.  1 root root       20 Dec  1 22:02 issue.net -> ../usr/lib/issue.net
+drwxr-xr-x.  3 root root       38 Dec  3 16:43 kernel
+drwxr-xr-x.  2 root root        6 Feb 25  2025 keyutils
+-rw-r--r--.  1 root root      880 Aug 26 18:34 krb5.conf
+drwxr-xr-x.  2 root root       55 Dec  3 16:42 krb5.conf.d
+-rw-r--r--.  1 root root    14243 Dec  3 16:42 ld.so.cache
+-rw-r--r--.  1 root root       28 Sep  3 03:41 ld.so.conf
+drwxr-xr-x.  2 root root       33 Dec  3 16:41 ld.so.conf.d
+-rw-r-----.  1 root root      191 Jul 29  2024 libaudit.conf
+drwxr-xr-x.  2 root root    16384 Dec  3 16:40 libibverbs.d
+drwxr-xr-x.  2 root root       35 Dec  3 16:40 libnl
+drwxr-xr-x.  6 root root       70 Dec  3 16:40 libreport
+-rw-r--r--.  1 root root     2391 Mar  1  2021 libuser.conf
+-rw-r--r--.  1 root root       79 Dec 12 07:04 locale.conf
+-rw-r--r--.  1 root root      114 Dec  3 16:43 localtime
+-rw-r--r--.  1 root root     8402 Nov 20  2023 login.defs
+-rw-r--r--.  1 root root      493 Apr 16  2021 logrotate.conf
+drwxr-xr-x.  2 root root       81 Dec  3 16:42 logrotate.d
+drwxr-xr-x.  3 root root       43 Dec  3 16:41 lsm
+-r--r--r--.  1 root root       33 Dec 12 07:04 machine-id
+-rw-r--r--.  1 root root      111 Aug 30  2023 magic
+-rw-r--r--.  1 root root     5235 Feb  1  2023 man_db.conf
+-rw-r--r--.  1 root root      782 Jan 30  2023 mke2fs.conf
+drwxr-xr-x.  2 root root       24 Dec  3 16:42 modprobe.d
+drwxr-xr-x.  2 root root        6 Dec  2 16:28 modules-load.d
+lrwxrwxrwx.  1 root root       25 Dec  3 16:42 motd -> /var/lib/update-motd/motd
+drwxr-xr-x.  2 root root        6 Jan 30  2023 motd.d
+lrwxrwxrwx.  1 root root       19 Dec  3 16:41 mtab -> ../proc/self/mounts
+-rw-r--r--.  1 root root    11926 Feb 19  2025 nanorc
+-rw-r--r--.  1 root root      767 Feb  2  2023 netconfig
+-rw-r--r--.  1 root root       58 Jun 23  2020 networks
+-rw-r--r--.  1 root root     1439 Feb  1  2023 nfs.conf
+-rw-r--r--.  1 root root     3606 Feb  1  2023 nfsmount.conf
+-rw-r--r--.  1 root root     2108 Sep  3 18:30 nsswitch.conf
+drwxr-xr-x.  3 root root       36 Dec  3 16:41 openldap
+drwxr-xr-x.  2 root root        6 Jan 30  2023 opt
+lrwxrwxrwx.  1 root root       21 Dec  1 22:02 os-release -> ../usr/lib/os-release
+drwxr-xr-x.  2 root root    16384 Dec  3 16:42 pam.d
+-rw-r--r--.  1 root root     1564 Dec 12 07:17 passwd
+-rw-r--r--.  1 root root     1519 Dec 12 07:04 passwd-
+drwxr-xr-x.  3 root root       21 Dec  3 16:40 pkcs11
+drwxr-xr-x.  3 root root       27 Dec  3 16:41 pkgconfig
+drwxr-xr-x.  7 root root       73 Dec  3 16:41 pki
+drwxr-xr-x.  5 root root       52 Dec  3 16:40 pm
+drwxr-xr-x.  2 root root        6 Jan 29  2023 popt.d
+-rw-r--r--.  1 root root      233 Jun 23  2020 printcap
+-rw-r--r--.  1 root root     1816 Jun 23  2020 profile
+drwxr-xr-x.  2 root root    16384 Dec  3 16:42 profile.d
+-rw-r--r--.  1 root root     6568 Jun 23  2020 protocols
+drwxr-xr-x. 10 root root      111 Jan 31  2023 rc.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx.  1 root root       10 Jan 29  2023 rc6.d -> rc.d/rc6.d
+-rw-r--r--.  1 root root     1787 Feb 25  2025 request-key.conf
+drwxr-xr-x.  2 root root       30 Dec  3 16:42 request-key.d
+lrwxrwxrwx.  1 root root       32 Dec  3 16:42 resolv.conf -> /run/systemd/resolve/resolv.conf
+-rw-r--r--.  1 root root     1634 Aug  2  2021 rpc
+drwxr-xr-x.  2 root root        6 Feb 26  2024 rpm
+-rw-r--r--.  1 root root      458 Nov 26 19:38 rsyncd.conf
+drwxr-xr-x.  2 root root       31 Dec  3 16:41 rsyslog.d
+drwxr-xr-x.  2 root root       51 Dec  3 16:41 rwtab.d
+drwxr-xr-x.  2 root root        6 Jan 30  2023 sasl2
+-rw-r--r--.  1 root root     6720 Jun  2  2025 screenrc
+drwxr-xr-x.  7 root root    16384 Dec  3 16:41 security
+drwxr-xr-x.  3 root root       57 Dec  3 16:43 selinux
+-rw-r--r--.  1 root root   692252 Jun 23  2020 services
+-rw-r--r--.  1 root root      216 Feb  1  2023 sestatus.conf
+----------.  1 root root      888 Dec 12 07:17 shadow
+----------.  1 root root      754 Dec 12 07:04 shadow-
+-rw-r--r--.  1 root root       90 Dec  3 16:42 shells
+drwxr-xr-x.  2 root root       62 Jan 30  2023 skel
+drwxr-xr-x.  4 root root      214 Dec 12 07:04 ssh
+drwxr-xr-x.  2 root root       91 Dec  3 16:41 ssl
+drwx------.  4 root root       31 Dec  3 16:41 sssd
+drwxr-xr-x.  2 root root        6 Jan 30  2023 statetab.d
+-rw-r--r--.  1 root root       43 Dec 12 07:17 subgid
+-rw-r--r--.  1 root root       22 Dec 12 07:04 subgid-
+-rw-r--r--.  1 root root       43 Dec 12 07:17 subuid
+-rw-r--r--.  1 root root       22 Dec 12 07:04 subuid-
+-rw-r-----.  1 root root     4316 Jun 30 16:02 sudo.conf
+-r--r-----.  1 root root     4375 Jun 30 15:59 sudoers
+drwxr-x---.  2 root root       33 Dec 12 07:04 sudoers.d
+drwxr-xr-x.  5 root root    16384 Dec  3 16:43 sysconfig
+-rw-r--r--.  1 root root      449 Dec  2 16:28 sysctl.conf
+drwxr-xr-x.  2 root root       52 Dec  3 16:42 sysctl.d
+lrwxrwxrwx.  1 root root       25 Dec  1 22:02 system-release -> ../usr/lib/system-release
+lrwxrwxrwx.  1 root root       29 Dec  1 22:02 system-release-cpe -> ../usr/lib/system-release-cpe
+drwxr-xr-x.  6 root root    16384 Dec  3 16:43 systemd
+drwxr-xr-x.  2 root root        6 Feb 26  2024 terminfo
+drwxr-xr-x.  2 root root        6 Dec  2 16:28 tmpfiles.d
+-rw-r--r--.  1 root root      375 Oct 23 23:36 trusted-key.key
+drwxr-xr-x.  4 root root       68 Dec  3 16:42 udev
+drwxr-xr-x.  2 root root       34 Nov 22  2024 update-motd.d
+-rw-r--r--.  1 root root     4017 Aug  4 16:45 vimrc
+-rw-r--r--.  1 root root     1183 Aug  4 16:45 virc
+-rw-r--r--.  1 root root     4925 Jul  8  2024 wgetrc
+-rw-r--r--.  1 root root      817 Jan 29  2023 xattr.conf
+drwxr-xr-x.  4 root root       38 Dec  3 16:41 xdg
+drwxr-xr-x.  2 root root       59 Dec  1 22:02 yum.repos.d
+[root@ip-172-31-13-161 etc]# nano sudoers
+[root@ip-172-31-13-161 etc]# nano sudoers
+[root@ip-172-31-13-161 etc]# nano sudoers
+[root@ip-172-31-13-161 etc]# pwd
+/etc
+[root@ip-172-31-13-161 etc]# sudo visudo
+[root@ip-172-31-13-161 etc]# sudo visudo
+visudo: /etc/sudoers.tmp unchanged
+[root@ip-172-31-13-161 etc]# sudo visudo
+visudo: /etc/sudoers.tmp unchanged
+[root@ip-172-31-13-161 etc]# sudo usermod -aG wheel jenkins
+[root@ip-172-31-13-161 etc]# sudo visudo
+visudo: /etc/sudoers.tmp unchanged
+[root@ip-172-31-13-161 etc]# exit
+exit
+[ec2-user@ip-172-31-13-161 ~]$ su - jenkins
+Password:
+Last login: Fri Dec 12 08:54:57 UTC 2025 from 172.31.14.211 on pts/2
+[jenkins@ip-172-31-13-161 ~]$ sudo yum install git -y
+[sudo] password for jenkins:
+Amazon Linux 2023 Kernel Livepatch repository                                                                               265 kB/s |  29 kB     00:00
+Dependencies resolved.
+============================================================================================================================================================
+ Package                                Architecture                 Version                                        Repository                         Size
+============================================================================================================================================================
+Installing:
+ git                                    x86_64                       2.50.1-1.amzn2023.0.1                          amazonlinux                        53 k
+Installing dependencies:
+ git-core                               x86_64                       2.50.1-1.amzn2023.0.1                          amazonlinux                       4.9 M
+ git-core-doc                           noarch                       2.50.1-1.amzn2023.0.1                          amazonlinux                       2.8 M
+ perl-Error                             noarch                       1:0.17029-5.amzn2023.0.2                       amazonlinux                        41 k
+ perl-File-Find                         noarch                       1.37-477.amzn2023.0.7                          amazonlinux                        25 k
+ perl-Git                               noarch                       2.50.1-1.amzn2023.0.1                          amazonlinux                        41 k
+ perl-TermReadKey                       x86_64                       2.38-9.amzn2023.0.2                            amazonlinux                        36 k
+ perl-lib                               x86_64                       0.65-477.amzn2023.0.7                          amazonlinux                        15 k
+
+Transaction Summary
+============================================================================================================================================================
+Install  8 Packages
+
+Total download size: 7.9 M
+Installed size: 41 M
+Downloading Packages:
+(1/8): git-2.50.1-1.amzn2023.0.1.x86_64.rpm                                                                                 1.4 MB/s |  53 kB     00:00
+(2/8): git-core-doc-2.50.1-1.amzn2023.0.1.noarch.rpm                                                                         43 MB/s | 2.8 MB     00:00
+(3/8): perl-Error-0.17029-5.amzn2023.0.2.noarch.rpm                                                                         1.3 MB/s |  41 kB     00:00
+(4/8): git-core-2.50.1-1.amzn2023.0.1.x86_64.rpm                                                                             51 MB/s | 4.9 MB     00:00
+(5/8): perl-File-Find-1.37-477.amzn2023.0.7.noarch.rpm                                                                      776 kB/s |  25 kB     00:00
+(6/8): perl-Git-2.50.1-1.amzn2023.0.1.noarch.rpm                                                                            1.3 MB/s |  41 kB     00:00
+(7/8): perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64.rpm                                                                      1.4 MB/s |  36 kB     00:00
+(8/8): perl-lib-0.65-477.amzn2023.0.7.x86_64.rpm                                                                            532 kB/s |  15 kB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                        49 MB/s | 7.9 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                    1/1
+  Installing       : git-core-2.50.1-1.amzn2023.0.1.x86_64                                                                                              1/8
+  Installing       : git-core-doc-2.50.1-1.amzn2023.0.1.noarch                                                                                          2/8
+  Installing       : perl-lib-0.65-477.amzn2023.0.7.x86_64                                                                                              3/8
+  Installing       : perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                                                                                        4/8
+  Installing       : perl-File-Find-1.37-477.amzn2023.0.7.noarch                                                                                        5/8
+  Installing       : perl-Error-1:0.17029-5.amzn2023.0.2.noarch                                                                                         6/8
+  Installing       : perl-Git-2.50.1-1.amzn2023.0.1.noarch                                                                                              7/8
+  Installing       : git-2.50.1-1.amzn2023.0.1.x86_64                                                                                                   8/8
+  Running scriptlet: git-2.50.1-1.amzn2023.0.1.x86_64                                                                                                   8/8
+  Verifying        : git-2.50.1-1.amzn2023.0.1.x86_64                                                                                                   1/8
+  Verifying        : git-core-2.50.1-1.amzn2023.0.1.x86_64                                                                                              2/8
+  Verifying        : git-core-doc-2.50.1-1.amzn2023.0.1.noarch                                                                                          3/8
+  Verifying        : perl-Error-1:0.17029-5.amzn2023.0.2.noarch                                                                                         4/8
+  Verifying        : perl-File-Find-1.37-477.amzn2023.0.7.noarch                                                                                        5/8
+  Verifying        : perl-Git-2.50.1-1.amzn2023.0.1.noarch                                                                                              6/8
+  Verifying        : perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                                                                                        7/8
+  Verifying        : perl-lib-0.65-477.amzn2023.0.7.x86_64                                                                                              8/8
+
+Installed:
+  git-2.50.1-1.amzn2023.0.1.x86_64                    git-core-2.50.1-1.amzn2023.0.1.x86_64               git-core-doc-2.50.1-1.amzn2023.0.1.noarch
+  perl-Error-1:0.17029-5.amzn2023.0.2.noarch          perl-File-Find-1.37-477.amzn2023.0.7.noarch         perl-Git-2.50.1-1.amzn2023.0.1.noarch
+  perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64         perl-lib-0.65-477.amzn2023.0.7.x86_64
+
+Complete!
+[jenkins@ip-172-31-13-161 ~]$ Connection to 3.110.218.233 closed by remote host.
+Connection to 3.110.218.233 closed.
+
+C:\Users\Gaurav.26\Downloads>ssh -i jenkinsserver.pem ec2-user@43.204.110.246
+The authenticity of host '43.204.110.246 (43.204.110.246)' can't be established.
+ED25519 key fingerprint is SHA256:no3x3coSwHOr5Z3S2IORRJBtusYBBvTEqoHSK+dzzGI.
+This host key is known by the following other names/addresses:
+    C:\Users\Gaurav.26/.ssh/known_hosts:220: 3.110.218.233
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '43.204.110.246' (ED25519) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Fri Dec 12 07:10:18 2025 from 103.146.111.126
+[ec2-user@ip-172-31-13-161 ~]$ su - jenkins
+Password:
+Last login: Fri Dec 12 09:17:16 UTC 2025 from 172.31.14.211 on pts/0
+[jenkins@ip-172-31-13-161 ~]$
+echo 'jenkins ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/99-jenkins-nopasswd
+sudo chmod 440 /etc/sudoers.d/99-jenkins-nopasswd
+sudo visudo -c   # Validate syntax
+[sudo] password for jenkins:
+jenkins ALL=(ALL) NOPASSWD:ALL
+/etc/sudoers: parsed OK
+/etc/sudoers.d/90-cloud-init-users: parsed OK
+/etc/sudoers.d/99-jenkins-nopasswd: parsed OK
+[jenkins@ip-172-31-13-161 ~]$ sudo -l -U jenkins
+Matching Defaults entries for jenkins on ip-172-31-13-161:
+    !visiblepw, always_set_home, match_group_by_gid, always_query_group_plugin, env_reset, env_keep="COLORS DISPLAY HOSTNAME HISTSIZE KDEDIR LS_COLORS",
+    env_keep+="MAIL QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE", env_keep+="LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES", env_keep+="LC_MONETARY
+    LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE", env_keep+="LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY",
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/var/lib/snapd/snap/bin
+
+User jenkins may run the following commands on ip-172-31-13-161:
+    (ALL) NOPASSWD: ALL
+    (ALL) ALL
+    (ALL) NOPASSWD: ALL
+
+[jenkins@ip-172-31-13-161 ~]$ sudo visudo
+
+visudo: /etc/sudoers.tmp unchanged
+[jenkins@ip-172-31-13-161 ~]$ id jenkins
+uid=1001(jenkins) gid=1001(jenkins) groups=1001(jenkins),10(wheel)
+[jenkins@ip-172-31-13-161 ~]$
